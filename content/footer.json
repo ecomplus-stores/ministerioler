@@ -5,16 +5,48 @@
   },
   "links_1": {
     "list_pages": true,
-    "title": "Páginas",
-    "list": []
+    "title": "Institucional",
+    "list": [
+      {
+        "text": "Blog"
+      },
+      {
+        "text": "Quem somos"
+      },
+      {
+        "text": "Fale conosco"
+      },
+      {
+        "text": "Política de troca"
+      },
+      {
+        "text": "Política de privacidade"
+      },
+      {
+        "text": "Termos e condições de compra"
+      }
+    ]
   },
   "links_2": {
     "list_categories": true,
-    "title": "Categorias",
-    "list": []
+    "title": "Livros",
+    "list": [
+      {
+        "text": "Ministério Pastoral"
+      },
+      {
+        "text": "Biografia"
+      },
+      {
+        "text": "Pregação"
+      },
+      {
+        "text": "Doutrina"
+      }
+    ]
   },
   "contacts": {
-    "title": "Contatos",
+    "title": "",
     "phone_wpp": true,
     "socials": true,
     "email": true,
