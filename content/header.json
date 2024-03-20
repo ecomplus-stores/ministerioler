@@ -1,32 +1,27 @@
 {
+  "categories_list": {
+    "featured": [
+      "/livros?Livros",
+      "/autores?Autores",
+      "/promocoes?Promoções"
+    ],
+    "random": 6,
+    "full_width": false
+  },
+  "menu_all_departments": false,
+  "centralized_logo": false,
   "marketing_stripe": {
     "text": "Aproveite nossos descontos de até 50%!",
     "link": "/promotion"
   },
-  "contacts_stripe": {
-    "pages": [
-      {
-        "title": "Sobre nós",
-        "link": "/pages/sobre-nos"
-      },
-      {
-        "title": "Esta loja é um PWA",
-        "link": "/posts/esta-loja-e-um-pwa"
-      }
-    ],
-    "phone_wpp": true,
-    "socials": true
-  },
-  "categories_list": {
-    "featured": [],
-    "random": 6,
-    "full_width": false
-  },
-  "centralized_logo": false,
-  "desktop_megamenu": false,
+  "alphabetical_order_submenu": true,
+  "name_all_departments": "",
   "search_input": true,
-  "alphabetical_order_submenu": false,
+  "desktop_megamenu": false,
   "full_width_submenu": false,
-  "menu_all_departments": false,
-  "name_all_departments": ""
+  "contacts_stripe": {
+    "pages": [],
+    "phone_wpp": false,
+    "socials": false
+  }
 }
