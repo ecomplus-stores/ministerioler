@@ -393,23 +393,23 @@ export default options => {
           options: [
             {
               label: '[12]',
-              value: 1
+              value: "1"
             },
             {
               label: '[6][6]',
-              value: 2
+              value: "2"
             },
             {
               label: '[8][4]',
-              value: 3
+              value: "3"
             },
             {
               label: '[4][8]',
-              value: 4
+              value: "4"
             },
             {
               label: '[4][4][4]',
-              value: 5
+              value: "5"
             },            
           ]
         }, 
@@ -421,11 +421,11 @@ export default options => {
           options: [
             {
               label: 'Rolar lateralmente',
-              value: true
+              value: "true"
             },
             {
               label: 'Quebrar linha',
-              value: false
+              value: "false"
             },
           ]
         },  
