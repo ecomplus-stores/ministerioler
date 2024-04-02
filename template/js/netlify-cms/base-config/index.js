@@ -530,125 +530,6 @@ export default options => {
       ]
     },
     
-    {
-      name: 'apx_tags',        
-      label: '[alpix.dev] - Produtos - Tags ',
-      description: 'Adicione tags ou selos nos produtos',
-      folder: `${options.baseDir}content/apx_tags`,
-      extension: 'json',
-      create: true,
-      slug: '{{slug}}',
-      fields: [
-        {
-          label: 'Identificador [SKU] ou [Categoria]',
-          name: 'identificador',
-          widget: 'select',
-              multiple: true,
-              options: [
-                ...options.state.routes
-                .filter(({ sku }) => typeof sku === 'string')
-                .map(({ sku }) => ({
-                  label: 'Produto - ' + sku,
-                  value: sku
-                })),
-                ...options.state.routes
-                .filter(el => el.resource === 'categories')
-                .map((el) => ({
-                  label: 'Categoria - ' + el.name,
-                  value: 'cat_'+el._id
-                }))
-              ]                
-        },
-        {
-          label: "Texto",
-          name: "description",
-          widget: "string",
-          required:false,          
-        }, 
-        {
-          label: 'Imagem ou ícone',
-          name: 'img',
-          widget: 'image',
-          required:false,
-        },   
-        {
-          label: 'Cor do texto',
-          required: false,
-          name: 'color',
-          widget: 'color'
-        },
-        {
-          label: 'Cor da borda',
-          required: false,
-          name: 'border',
-          widget: 'color'
-        },
-        {
-          label: 'Cor do fundo',
-          required: false,
-          name: 'background_color',
-          widget: 'color'
-        }
-      ]
-    },   
-    {
-      name: 'apx_products_content',        
-      label: '[alpix.dev] - Produtos - Abas de Conteúdo',
-      description: '',
-      folder: `${options.baseDir}content/apx_products_content`,
-      extension: 'json',
-      create: true,
-      slug: '{{slug}}',
-      fields: [
-        {
-          label: "Título do Registro",
-          hint:"Campo apenas informativo.",
-          name: "title",
-          widget: "string"          
-        }, 
-        {
-          label: 'Identificador [SKU] [Categoria] ou [default]',
-          name: 'identificador',
-          widget: 'select',
-              multiple: true,
-              options: [
-                {label: 'Default / Padrão / Todos os Produtos',
-              value: 'default'},
-                ...options.state.routes
-                .filter(({ sku }) => typeof sku === 'string')
-                .map(({ sku }) => ({
-                  label: 'Produto - ' + sku,
-                  value: sku
-                })),
-                ...options.state.routes
-                .filter(el => el.resource === 'categories')
-                .map((el) => ({
-                  label: 'Categoria - ' + el.name,
-                  value: 'cat_'+el._id
-                }))
-              ]                
-        }, 
-        {
-          label:"Abas de Conteúdo",
-          name:"list",
-          widget:"list",
-          required:false,
-          fields: [
-            {
-              label: "Título",
-              name: "title",
-              widget: "string"          
-            }, 
-            {
-              label: "Conteúdo",
-              name: "content",
-              widget: "markdown",
-              required:false,          
-            }              
-          ]
-        },
-      ]
-    },
     
 
 ])
@@ -687,9 +568,130 @@ export default options => {
       getExtraPages(options),
       getWidgets(options),
       {
+        name: 'apx_tags',        
+        label: '[alpix.dev] - Produtos - Tags ',
+        description: 'Adicione tags ou selos nos produtos',
+        folder: `${options.baseDir}content/apx_tags`,
+        extension: 'json',
+        create: true,
+        slug: '{{slug}}',
+        fields: [
+          {
+            label: 'Identificador [SKU] ou [Categoria]',
+            name: 'identificador',
+            widget: 'select',
+                multiple: true,
+                options: [
+                  ...options.state.routes
+                  .filter(({ sku }) => typeof sku === 'string')
+                  .map(({ sku }) => ({
+                    label: 'Produto - ' + sku,
+                    value: sku
+                  })),
+                  ...options.state.routes
+                  .filter(el => el.resource === 'categories')
+                  .map((el) => ({
+                    label: 'Categoria - ' + el.name,
+                    value: 'cat_'+el._id
+                  }))
+                ]                
+          },
+          {
+            label: "Posição na lista",
+            name:"type",
+            widget: "select",
+            options: ["top_left","top_center","bottom_left","bottom_center","bottom_right"],
+            required:false, 
+          }, 
+          {
+            label: "Nome da Característica",
+            hint:"Exatamente como cadastrado no painel E-com.plus",
+            name: "title",
+            widget: "string"          
+          }, 
+          {
+            label: "Descrição",
+            name: "description",
+            widget: "string",
+            required:false,          
+          }, 
+          {
+            label: 'Imagem ou ícone',
+            name: 'img',
+            widget: 'image',
+            required:false,
+          },   
+          {
+            label: 'Cor do texto',
+            required: false,
+            name: 'color',
+            widget: 'color'
+          },
+          {
+            label: 'Cor da borda',
+            required: false,
+            name: 'border',
+            widget: 'color'
+          },
+          {
+            label: 'Cor do fundo',
+            required: false,
+            name: 'background_color',
+            widget: 'color'
+          }
+        ]
+      },
+      {
+        name: 'apx_properties',        
+        label: '[alpix.dev] - Características',
+        description: 'Adicione imagens, ícones e/ou descrições nos filtros de características',
+        folder: `${options.baseDir}content/apx_properties`,
+        extension: 'json',
+        create: true,
+        slug: '{{slug}}',
+        fields: [
+          {
+            label: "Nome da Característica",
+            hint:"Exatamente como cadastrado no painel E-com.plus",
+            name: "title",
+            widget: "string"          
+          }, 
+          {
+            label: "Descrição",
+            name: "description",
+            widget: "string",
+            required:false,          
+          }, 
+          {
+            label: 'Imagem ou ícone',
+            name: 'img',
+            widget: 'image',
+            required:false,
+          },   
+          {
+            label: 'Cor 1',
+            name: 'color_1',
+            widget: 'color',
+            required:false,
+          },   
+          {
+            label: 'Cor 2',
+            name: 'color_2',
+            widget: 'color',
+            required:false,
+          },   
+          {
+            label: 'Cor 3',
+            name: 'color_3',
+            widget: 'color',
+            required:false,
+          },   
+        ]
+      },
+      {
         name: 'apx_products_content',        
         label: '[alpix.dev] - Produtos - Abas de Conteúdo',
-        description: 'Configure as opções disponíveis para personalização e sugestões de produtos.',
+        description: '',
         folder: `${options.baseDir}content/apx_products_content`,
         extension: 'json',
         create: true,
@@ -707,6 +709,8 @@ export default options => {
             widget: 'select',
                 multiple: true,
                 options: [
+                  {label: 'Default / Padrão / Todos os Produtos',
+                value: 'default'},
                   ...options.state.routes
                   .filter(({ sku }) => typeof sku === 'string')
                   .map(({ sku }) => ({
@@ -741,147 +745,7 @@ export default options => {
             ]
           },
         ]
-      },
-      {
-        name: 'apx_products',
-        label: '[alpix.dev] - Produtos - Personalização',
-        description: 'Conteúdo específico das páginas de produto',
-        folder: `${options.baseDir}content/apx_products`,
-        extension: 'json',
-        create: true,
-        slug: '{{slug}}',
-        fields: [
-          {
-            label: 'SKU',
-            name: 'title',
-            widget: 'string'
-          },         
-          {
-            label:"Personalização",
-            name:"customizations",
-            widget:"list",
-            required:false,
-            fields: [
-              {
-                label: "Item",
-                name: "item",
-                widget: "object",
-                required:false,
-                fields: [
-                  {
-                    label: "ID do grid",
-                    name: "title",
-                    widget: "string"          
-                  },
-                  {
-                    label:"Opções",
-                    name:"list",
-                    widget:"list",
-                    required:false,
-                    fields: [
-                      {
-                        label: "Opção",
-                        name: "option",
-                        widget: "object",
-                        required:false,
-                        fields: [
-                          {
-                            label: "Nome da opção",
-                            name: "title",
-                            widget: "string"          
-                          },      
-                          {
-                            label: "Tipo de Custo",
-                            name:"type",
-                            widget: "select",
-                            options: ["Fixo","%"] 
-                          },
-                          {
-                            label: "Valor",
-                            name: "value",
-                            widget: "number",
-                            min:0,
-                            value_type:"float"
-                          }, 
-                          {
-                            label: "Cor Início Degrade",
-                            name: "degrade_start",
-                            widget: "color",
-                            required:false,
-
-                          },                                                    
-                          {
-                            label: "Cor Fim Degrade",
-                            name: "degrade_end",
-                            widget: "color",
-                            required:false,
-
-                          }                                                   
-                        ]
-                      } 
-                    ]
-                  },                                                  
-                ]
-              } 
-            ]
-          },
-          // {
-          //   label: 'Seções',
-          //   name: 'sections',
-          //   required: false,
-          //   widget: 'list',
-          //   types: [  
-          //     {
-          //       label: 'Especificações',
-          //       name: 'specifications',
-          //       widget: 'object',
-          //       fields: [
-          //       {
-          //         label: 'Exibir especificações',
-          //         name: 'enabled',
-          //         widget: 'boolean',
-          //         default: true
-          //       },
-          //       {
-          //         label: 'Título',
-          //         name: 'title',
-          //         widget: 'string',
-          //         hint: '',
-          //         required: false
-          //       },
-          //       {
-          //         label: 'Descrição',
-          //         name: 'description',
-          //         widget: 'string',
-          //         hint: '',
-          //         required: false
-          //       },
-          //       {
-          //         label: 'Texto CTA',
-          //         name: 'cta_text',
-          //         widget: 'string',
-          //         hint: '',
-          //         required: false
-          //       },
-          //       {
-          //         label: 'Link CTA',
-          //         name: 'cta_url',
-          //         widget: 'string',
-          //         hint: '',
-          //         required: false
-          //       },
-          //       {
-          //         label: 'Imagem',
-          //         name: 'image',
-          //         widget: 'image',
-          //         required:false,          
-          //       }
-          //       ]
-          //     }
-          //   ].concat(options.sections)
-          // }
-        ]
-      }      
+      },         
     ]
   }
 }

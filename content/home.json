@@ -2,6 +2,52 @@
   "meta_title": "",
   "meta_description": "",
   "sections": [
-    
+    {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 13,
+      "page": 1,
+      "collection_id": "65f1eea287ab487fbfe4252b:categories:Promoções:/promocoes",
+      "sort": "views",
+      "title": "Promoções",
+      "link": "/promocoes"
+    },
+    {
+      "type": "banners-grid",
+      "banners": [
+        {
+          "img": "/img/uploads/430x280.png"
+        },
+        {
+          "img": "/img/uploads/430x280.png"
+        },
+        {
+          "img": "/img/uploads/430x280.png"
+        }
+      ]
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 15,
+      "page": 1,
+      "collection_id": "65f1ee9787ab487fbfe42510:categories:Livros:/livros",
+      "sort": "sales",
+      "title": "Mais Vendidos",
+      "link": "/mais-vendidos"
+    },
+    {
+      "type": "offers-timer",
+      "max_hours": 48,
+      "start": "2024-03-20T02:46:44.975Z",
+      "end": "2024-04-05T02:46:44.988Z",
+      "offers": [
+        "65f1f14587ab487fbfe42c16",
+        "65f1f14587ab487fbfe42c16",
+        "65f1f14587ab487fbfe42c16",
+        "65f1f14587ab487fbfe42c16",
+        "65f1f14587ab487fbfe42c16"
+      ]
+    }
   ]
 }
