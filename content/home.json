@@ -3,6 +3,24 @@
   "meta_description": "",
   "sections": [
     {
+      "type": "apx_banners-grid",
+      "grid": "3",
+      "banners": [
+        {
+          "desktop": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/image.png"
+          },
+          "mobile": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/image.png"
+          }
+        }
+      ],
+      "breakline": "false",
+      "container": "container_90"
+    },
+    {
       "type": "collection-shelf",
       "shuffle": false,
       "limit": 13,
