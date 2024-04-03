@@ -31,6 +31,16 @@
       "container": "container_90"
     },
     {
+      "type": "apx_list-images",
+      "container": "container_90",
+      "banners": [
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        }
+      ]
+    },
+    {
       "type": "collection-shelf",
       "shuffle": false,
       "limit": 13,
