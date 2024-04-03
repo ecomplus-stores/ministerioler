@@ -51,6 +51,24 @@
       "link": "/promocoes"
     },
     {
+      "type": "apx_banners-grid",
+      "container": "container_90",
+      "breakline": "true",
+      "banners": [
+        {
+          "desktop": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/430x280.png"
+          },
+          "mobile": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/430x280.png"
+          }
+        }
+      ],
+      "grid": "5"
+    },
+    {
       "type": "banners-grid",
       "banners": [
         {
