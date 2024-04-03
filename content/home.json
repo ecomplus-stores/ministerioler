@@ -69,6 +69,29 @@
       "grid": "5"
     },
     {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 15,
+      "page": 1,
+      "collection_id": "65f1ee9787ab487fbfe42510:categories:Livros:/livros",
+      "sort": "sales",
+      "title": "Mais Vendidos",
+      "link": "/mais-vendidos"
+    },
+    {
+      "type": "apx_list-images",
+      "container": "container_90",
+      "title": "Autores em Destaque",
+      "link": "/autores",
+      "banners": [
+        {
+          "img": "/img/uploads/rectangle-3.png",
+          "title": "Clarice Lispector",
+          "link": "/clarice-lispector"
+        }
+      ]
+    },
+    {
       "type": "banners-grid",
       "banners": [
         {
@@ -81,16 +104,6 @@
           "img": "/img/uploads/430x280.png"
         }
       ]
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": false,
-      "limit": 15,
-      "page": 1,
-      "collection_id": "65f1ee9787ab487fbfe42510:categories:Livros:/livros",
-      "sort": "sales",
-      "title": "Mais Vendidos",
-      "link": "/mais-vendidos"
     },
     {
       "type": "offers-timer",
