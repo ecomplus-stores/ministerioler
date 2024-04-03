@@ -15,6 +15,16 @@
             "mask_opacity": 0,
             "img": "/img/uploads/image.png"
           }
+        },
+        {
+          "desktop": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/image-1-.png"
+          },
+          "mobile": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/image-1-.png"
+          }
         }
       ],
       "breakline": "false",
