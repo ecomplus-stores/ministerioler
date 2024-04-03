@@ -140,209 +140,279 @@ const spacer = [
 
 const bannerFields = [
   {
-    label: 'Imagem [Desktop]',
-    name: 'img',
-    widget: 'image'
+    label: 'Desktop',
+    name: 'desktop',
+    widget: 'object',
+    fields: [
+      {
+        label: 'Imagem',
+        name: 'img',
+        widget: 'image'
+      },
+      {
+        label: 'Link',
+        required: false,
+        name: 'link',
+        widget: 'string'
+      },
+      {
+        label: 'Alt',
+        required: false,
+        name: 'alt',
+        widget: 'string'
+      },
+      
+      {
+        label: 'Título',
+        required: false,
+        name: 'title',
+        widget: 'string'
+      },
+      {
+        label: 'Cor do título',
+        required: false,
+        name: 'title_color',
+        widget: 'color'
+      },
+      {
+        label: 'Descrição',
+        required: false,
+        name: 'description',
+        widget: 'string'
+      },
+      
+      {
+        label: 'Cor da descrição',
+        required: false,
+        name: 'description_color',
+        widget: 'color'
+      },
+      
+      {
+        label: 'Transparência da Máscara',
+        name: 'mask_opacity',
+        hint: 'De 0 até 10. 0 é transparente e 10 é totalmente opaco.',
+        min: 0,
+        max:10,
+        default:0,    
+        widget: 'number'
+      },
+      {
+        label: 'Cor da Máscara',
+        required: false,
+        name: 'mask_color',
+        widget: 'color'
+      },      
+      {
+        label: 'Posição do conteúdo',
+        required: false,
+        name: 'content_position',
+        widget: 'select',
+        options: ["top_left","top_center","top_right","center_left","center_center","center_right","bottom_left","bottom_center","bottom_right"]
+      },
+      {
+        label: 'Ordem de conteúdo',
+        required: false,
+        name: 'content_order',
+        widget: 'select',
+        options: ["before_image","inside_image","after_image","left_image","right_image"]
+      },  
+      {
+        label: 'Animação',
+        required: false,
+        name: 'animate',
+        widget: 'select',
+        options: animations
+      },
+      {
+        label: 'Texto do botão [Principal]',
+        required: false,
+        name: 'btn_text',
+        widget: 'string'
+      },
+      {
+        label: 'URL do botão [Principal]',
+        required: false,
+        name: 'btn_url',
+        widget: 'string'
+      },
+      {
+        label: 'Cor do texto do botão [Principal]',
+        required: false,
+        name: 'btn_text_color',
+        widget: 'color'
+      },
+      {
+        label: 'Cor de fundo do botão [Principal]',
+        required: false,
+        name: 'btn_background',
+        widget: 'color'
+      },      
+      
+      {
+        label: 'Texto do botão [Secundário]',
+        required: false,
+        name: 'btn_text_2',
+        widget: 'string'
+      },
+      
+      {
+        label: 'URL do botão [Secundário]',
+        required: false,
+        name: 'btn_url_2',
+        widget: 'string'
+      },
+      {
+        label: 'Cor do texto do botão [Secundário]',
+        required: false,
+        name: 'btn_text_color_2',
+        widget: 'color'
+      },
+      {
+        label: 'Cor do fundo do botão [Secundário]',
+        required: false,
+        name: 'btn_background_2',
+        widget: 'color'
+      },      
+      
+    ]
   },
   {
-    label: 'Imagem [Mobile]',
-    required: false,
-    name: 'mobile_img',
-    widget: 'image'
-  },
-  {
-    label: 'Link',
-    required: false,
-    name: 'link',
-    widget: 'string'
-  },
-  {
-    label: 'Alt',
-    required: false,
-    name: 'alt',
-    widget: 'string'
-  },
-  
-  {
-    label: 'Título',
-    required: false,
-    name: 'title',
-    widget: 'string'
-  },
-  {
-    label: 'Descrição',
-    required: false,
-    name: 'description',
-    widget: 'string'
-  },
-  {
-    label: 'Posição do conteúdo',
-    required: true,
-    name: 'content_position',
-    widget: 'select',
-    options: ["top_left","top_center","top_right","center_left","center_center","center_right","bottom_left","bottom_center","bottom_right"]
-  },
-  {
-    label: 'Ordem de conteúdo',
-    required: true,
-    name: 'content_order',
-    widget: 'select',
-    options: ["before_image","inside_image","after_image","left_image","right_image"]
-  },  
-  {
-    label: 'Animação',
-    required: false,
-    name: 'animate',
-    widget: 'select',
-    options: animations
-  },
-  {
-    label: 'Texto do botão [Principal]',
-    required: false,
-    name: 'btn_text',
-    widget: 'string'
-  },
-  {
-    label: 'Cor do texto do botão [Principal]',
-    required: false,
-    name: 'btn_text_color',
-    widget: 'color'
-  },
-  {
-    label: 'Fundo do botão [Principal]',
-    required: false,
-    name: 'btn_background',
-    widget: 'color'
-  },
-  
-  {
-    label: 'URL do botão [Principal]',
-    required: false,
-    name: 'btn_url',
-    widget: 'string'
-  },
-  {
-    label: 'Texto do botão [Secundário]',
-    required: false,
-    name: 'btn_text_2',
-    widget: 'string'
-  },
-  
-  {
-    label: 'URL do botão [Secundário]',
-    required: false,
-    name: 'btn_url_2',
-    widget: 'string'
-  },
-  {
-    label: 'Cor do texto do botão [Secundário]',
-    required: false,
-    name: 'btn_text_color_2',
-    widget: 'color'
-  },
-  {
-    label: 'Fundo do botão [Secundário]',
-    required: false,
-    name: 'btn_background_2',
-    widget: 'color'
-  },
-  {
-    label: 'Fundo do botão [Principal] [Mobile]',
-    required: false,
-    name: 'btn_background_m',
-    widget: 'color'
-  },
-  {
-    label: 'Cor do texto do botão [Secundário] [Mobile]',
-    required: false,
-    name: 'btn_text_color_2_m',
-    widget: 'color'
-  },
-  {
-    label: 'Fundo do botão [Secundário] [Mobile]',
-    required: false,
-    name: 'btn_background_2_m',
-    widget: 'color'
-  },
-  {
-    label: 'Texto do link',
-    required: false,
-    name: 'link_text',
-    widget: 'string'
-  },
-  {
-    label: 'URL do link',
-    required: false,
-    name: 'link_url',
-    widget: 'string'
-  },
-  {
-    label: 'Cor do título',
-    required: false,
-    name: 'title_color',
-    widget: 'color'
-  },
-  {
-    label: 'Cor da descrição',
-    required: false,
-    name: 'description_color',
-    widget: 'color'
-  },
-  {
-    label: 'Cor da Máscara',
-    required: false,
-    name: 'mask_color',
-    widget: 'color'
-  },
-  {
-    label: 'Transparência da Máscara',
-    name: 'mask_opacity',
-    hint: 'De 0 até 10. 0 é transparente e 10 é totalmente opaco.',
-    min: 0,
-    max:10,
-    default:0,    
-    widget: 'number'
-  },
-  
-  {
-    label: 'Cor do texto do link',
-    required: false,
-    name: 'link_text_color',
-    widget: 'color'
-  },
-  {
-    label: 'Cor do título [Mobile]',
-    required: false,
-    name: 'title_color_m',
-    widget: 'color'
-  },
-  {
-    label: 'Cor da descrição [Mobile]',
-    required: false,
-    name: 'description_color_m',
-    widget: 'color'
-  },
-  {
-    label: 'Cor da Máscara [Mobile]',
-    required: false,
-    name: 'mask_color_m',
-    widget: 'color'
-  },
-  {
-    label: 'Transparência da Máscara [Mobile]',
-    name: 'mask_opacity_m',
-    hint: 'De 0 até 10. 0 é transparente e 10 é totalmente opaco.',
-    min: 0,
-    max:10,
-    default:0,    
-    widget: 'number'
-  },
-  
-  {
-    label: 'Cor do texto do link [Mobile]',
-    required: false,
-    name: 'link_text_color_m',
-    widget: 'color'
+    label: 'Mobile',
+    name: 'mobile',
+    widget: 'object',
+    fields: [
+      {
+        label: 'Imagem',
+        name: 'img',
+        widget: 'image'
+      },
+      {
+        label: 'Link',
+        required: false,
+        name: 'link',
+        widget: 'string'
+      },
+      {
+        label: 'Alt',
+        required: false,
+        name: 'alt',
+        widget: 'string'
+      },
+      
+      {
+        label: 'Título',
+        required: false,
+        name: 'title',
+        widget: 'string'
+      },
+      {
+        label: 'Cor do título',
+        required: false,
+        name: 'title_color',
+        widget: 'color'
+      },
+      {
+        label: 'Descrição',
+        required: false,
+        name: 'description',
+        widget: 'string'
+      },
+      
+      {
+        label: 'Cor da descrição',
+        required: false,
+        name: 'description_color',
+        widget: 'color'
+      },
+      
+      {
+        label: 'Transparência da Máscara',
+        name: 'mask_opacity',
+        hint: 'De 0 até 10. 0 é transparente e 10 é totalmente opaco.',
+        min: 0,
+        max:10,
+        default:0,    
+        widget: 'number'
+      },
+      {
+        label: 'Cor da Máscara',
+        required: false,
+        name: 'mask_color',
+        widget: 'color'
+      },      
+      {
+        label: 'Posição do conteúdo',
+        required: false,
+        name: 'content_position',
+        widget: 'select',
+        options: ["top_left","top_center","top_right","center_left","center_center","center_right","bottom_left","bottom_center","bottom_right"]
+      },
+      {
+        label: 'Ordem de conteúdo',
+        required: false,
+        name: 'content_order',
+        widget: 'select',
+        options: ["before_image","inside_image","after_image","left_image","right_image"]
+      },  
+      {
+        label: 'Animação',
+        required: false,
+        name: 'animate',
+        widget: 'select',
+        options: animations
+      },
+      {
+        label: 'Texto do botão [Principal]',
+        required: false,
+        name: 'btn_text',
+        widget: 'string'
+      },
+      {
+        label: 'URL do botão [Principal]',
+        required: false,
+        name: 'btn_url',
+        widget: 'string'
+      },
+      {
+        label: 'Cor do texto do botão [Principal]',
+        required: false,
+        name: 'btn_text_color',
+        widget: 'color'
+      },
+      {
+        label: 'Cor de fundo do botão [Principal]',
+        required: false,
+        name: 'btn_background',
+        widget: 'color'
+      },      
+      
+      {
+        label: 'Texto do botão [Secundário]',
+        required: false,
+        name: 'btn_text_2',
+        widget: 'string'
+      },
+      
+      {
+        label: 'URL do botão [Secundário]',
+        required: false,
+        name: 'btn_url_2',
+        widget: 'string'
+      },
+      {
+        label: 'Cor do texto do botão [Secundário]',
+        required: false,
+        name: 'btn_text_color_2',
+        widget: 'color'
+      },
+      {
+        label: 'Cor do fundo do botão [Secundário]',
+        required: false,
+        name: 'btn_background_2',
+        widget: 'color'
+      },            
+    ]
   }
 ]
 
