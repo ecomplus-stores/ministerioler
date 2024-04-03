@@ -57,6 +57,13 @@ const spacer = [
     widget: 'object',
     fields: [
       {
+        label: 'Container',
+        required: true,
+        name: 'container',
+        widget: 'select',
+        options: ["container","container-fluid","container_90"]
+      },
+      {
         label: 'Desktop',
         name: 'desktop',
         widget: 'object',
@@ -425,21 +432,8 @@ export default options => {
       name: 'apx_responsive-banner',
       widget: 'object',
       fields: [
-        {
-          label: 'Container',
-          required: true,
-          name: 'container',
-          widget: 'select',
-          options: ["container","container-fluid","container_90"]
-        },  
-        {
-          label: 'Espaçamento',
-          required: true,
-          name: 'padding',
-          widget: 'select',
-          options: ["px-0","px-1","px-2","px-3","px-4","px-5"]
-        }, 
-        ...bannerFields,...spacer]
+        ...spacer,
+        ...bannerFields]
     },
     
     {
@@ -447,13 +441,7 @@ export default options => {
       name: 'apx_banners-grid',
       widget: 'object',
       fields: [
-        {
-          label: 'Container',
-          required: true,
-          name: 'container',
-          widget: 'select',
-          options: ["container","container-fluid","container_90"]
-        },  
+          
         ...spacer, 
         {
           label: 'Formato',
@@ -513,13 +501,6 @@ export default options => {
       name: 'apx_list-images',
       widget: 'object',
       fields: [
-        {
-          label: 'Container',
-          required: true,
-          name: 'container',
-          widget: 'select',
-          options: ["container","container-fluid","container_90"]
-        },  
         ...spacer, 
         {
           label: 'Título da Sessão',
@@ -565,6 +546,7 @@ export default options => {
       name: 'apx_banner-slider',
       widget: 'object',
       fields: [
+        ...spacer, 
         {
           label: 'Slides',
           name: 'slides',
