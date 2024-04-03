@@ -117,6 +117,30 @@
         "65f1f14587ab487fbfe42c16",
         "65f1f14587ab487fbfe42c16"
       ]
+    },
+    {
+      "type": "apx_responsive-banner",
+      "desktop": {
+        "animate": "fadeInUp",
+        "img": "/img/uploads/group-24.png",
+        "content_order": "left_image",
+        "btn_url": "/biblias",
+        "mask_color": "#084f53",
+        "btn_text": "Ver Catálogo",
+        "btn_text_color": "#ffffff",
+        "mask_opacity": 0,
+        "title": "Fortaleça seu relacionamento com Deus",
+        "title_color": "#ffffff"
+      },
+      "mobile": {
+        "mask_opacity": 0,
+        "img": "/img/uploads/group-24.png",
+        "content_order": "before_image",
+        "mask_color": "#084f53",
+        "animate": "fadeInLeft"
+      },
+      "container": "container_90",
+      "padding": "px-0"
     }
   ]
 }
