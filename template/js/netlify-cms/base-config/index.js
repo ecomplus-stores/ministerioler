@@ -285,7 +285,8 @@ const bannerFields = [
       {
         label: 'Imagem',
         name: 'img',
-        widget: 'image'
+        widget: 'image',
+        required:false
       },
       {
         label: 'Link',
