@@ -28,12 +28,40 @@
         }
       ],
       "breakline": "false",
-      "container": "container_90"
+      "container": "container"
     },
     {
       "type": "apx_list-images",
-      "container": "container_90",
+      "container": "container",
       "banners": [
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        },
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        },
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        },
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        },
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        },
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        },
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        },
         {
           "img": "/img/uploads/136x136.png",
           "title": "Bíblias"
@@ -43,18 +71,46 @@
     {
       "type": "collection-shelf",
       "shuffle": false,
-      "limit": 13,
+      "limit": 15,
       "page": 1,
-      "collection_id": "65f1eea287ab487fbfe4252b:categories:Promoções:/promocoes",
-      "sort": "views",
+      "collection_id": "65f1ee9787ab487fbfe42510:categories:Livros:/livros",
+      "sort": "sales",
       "title": "Promoções",
-      "link": "/promocoes"
+      "link": "/mais-vendidos"
     },
     {
       "type": "apx_banners-grid",
-      "container": "container_90",
-      "breakline": "true",
       "banners": [
+        {
+          "desktop": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/430x280.png"
+          },
+          "mobile": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/430x280.png"
+          }
+        },
+        {
+          "desktop": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/430x280.png"
+          },
+          "mobile": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/430x280.png"
+          }
+        },
+        {
+          "desktop": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/430x280.png"
+          },
+          "mobile": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/430x280.png"
+          }
+        },
         {
           "desktop": {
             "mask_opacity": 0,
@@ -66,7 +122,9 @@
           }
         }
       ],
-      "grid": "5"
+      "grid": "5",
+      "breakline": "false",
+      "container": "container"
     },
     {
       "type": "collection-shelf",
@@ -80,10 +138,45 @@
     },
     {
       "type": "apx_list-images",
-      "container": "container_90",
+      "container": "container",
       "title": "Autores em Destaque",
       "link": "/autores",
       "banners": [
+        {
+          "img": "/img/uploads/rectangle-3.png",
+          "title": "Clarice Lispector",
+          "link": "/clarice-lispector"
+        },
+        {
+          "img": "/img/uploads/rectangle-3.png",
+          "title": "Clarice Lispector",
+          "link": "/clarice-lispector"
+        },
+        {
+          "img": "/img/uploads/rectangle-3.png",
+          "title": "Clarice Lispector",
+          "link": "/clarice-lispector"
+        },
+        {
+          "img": "/img/uploads/rectangle-3.png",
+          "title": "Clarice Lispector",
+          "link": "/clarice-lispector"
+        },
+        {
+          "img": "/img/uploads/rectangle-3.png",
+          "title": "Clarice Lispector",
+          "link": "/clarice-lispector"
+        },
+        {
+          "img": "/img/uploads/rectangle-3.png",
+          "title": "Clarice Lispector",
+          "link": "/clarice-lispector"
+        },
+        {
+          "img": "/img/uploads/rectangle-3.png",
+          "title": "Clarice Lispector",
+          "link": "/clarice-lispector"
+        },
         {
           "img": "/img/uploads/rectangle-3.png",
           "title": "Clarice Lispector",
@@ -92,24 +185,10 @@
       ]
     },
     {
-      "type": "banners-grid",
-      "banners": [
-        {
-          "img": "/img/uploads/430x280.png"
-        },
-        {
-          "img": "/img/uploads/430x280.png"
-        },
-        {
-          "img": "/img/uploads/430x280.png"
-        }
-      ]
-    },
-    {
       "type": "offers-timer",
       "max_hours": 48,
       "start": "2024-03-20T02:46:44.975Z",
-      "end": "2024-04-05T02:46:44.988Z",
+      "end": "2024-05-05T02:46:44.988Z",
       "offers": [
         "65f1f14587ab487fbfe42c16",
         "65f1f14587ab487fbfe42c16",
@@ -128,9 +207,11 @@
         "mask_color": "#084f53",
         "btn_text": "Ver Catálogo",
         "btn_text_color": "#ffffff",
+        "description_color": "#ffffff",
         "mask_opacity": 0,
         "title": "Fortaleça seu relacionamento com Deus",
-        "title_color": "#ffffff"
+        "title_color": "#ffffff",
+        "description":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. "
       },
       "mobile": {
         "mask_opacity": 0,

@@ -578,8 +578,7 @@ export default options => {
           step: 1000,
           default: 9000,
           widget: 'number'
-        },
-        ...spacer
+        }
       ]
     },
     
@@ -649,13 +648,6 @@ export default options => {
                   }))
                 ]                
           },
-          {
-            label: "Posição na lista",
-            name:"type",
-            widget: "select",
-            options: ["top_left","top_center","bottom_left","bottom_center","bottom_right"],
-            required:false, 
-          }, 
           {
             label: "Nome da Característica",
             hint:"Exatamente como cadastrado no painel E-com.plus",

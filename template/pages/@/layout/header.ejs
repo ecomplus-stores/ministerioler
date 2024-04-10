@@ -74,8 +74,8 @@ const hasAllDepartments = header.menu_all_departments
   <% } %>
 </div>
 
-<header class="header" id="header">
-  <div class="header__container container-fluid">
+<header class="header p-0" id="header">
+  <div class="header__container container_90">
     <div class="header__row row<%= isCentralizedLogo ? ' header__row--centralized-logo' : '' %><%= isCentralizedLogo && isCategoriesNavFull ? ' header__row--full-width' : '' %>">
       <div class="col-auto p-0 header__toggler-block d-none">
         <button
@@ -198,7 +198,7 @@ const hasAllDepartments = header.menu_all_departments
         </div>
       <% } %>
 
-      <div class="order-lg-last col-auto p-0 header__buttons-block d-none d-md-block">
+      <div class="order-lg-last col-auto header__buttons-block d-none d-md-block">
         <div
           class="header__buttons"
           role="group"
