@@ -647,4 +647,99 @@ nav{
             }
         }
     }
+
+    #call-seller{
+        border-top: 1px solid var(--color-border);
+        padding: 1.5rem 0 1.5rem 0;
+        margin-top: 1.875rem;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        *{font-size: var(--font-size-sm);line-height: var(--font-size-sm);}
+        a{text-decoration: underline;}
+    }
+
+    #product-gallery{
+        .gallery{
+            flex-direction: column-reverse;
+            .gallery__thumbs{
+                display: flex;
+                flex-basis: unset;
+                flex-wrap: nowrap;
+                gap: 1.875rem;
+                overflow: hidden;
+                margin-top: 1.875rem;
+            
+            }
+            .gallery__stage{
+                background: #fff;
+                border-radius: 1.875rem;
+                padding: 4rem 0;
+                .gallery__big-image{
+                    text-align: center;
+                    .product__picture{margin: 0 auto;}
+                }
+            }
+        }
+    }
+    .shipping-calculator{
+        border-top: 1px solid var(--color-border);
+        padding: 1.5rem 0 1.5rem 0;
+        
+        label{
+            font-weight: 600;
+            font-size: var(--font-size-sm);
+        }
+        .input-group{
+            border-radius: 0.25rem;
+            overflow: hidden;
+        }
+        input{font-size: var(--font-size);}
+        input,
+        button{
+            border: 0;
+            height: 46px;
+            padding: 0 1rem;
+            background: #fff;
+        }
+        .btn-outline-secondary:after{
+            content: "Calcular";
+            text-transform: uppercase;
+            font-size: var(--smallest);
+            font-weight: bold;
+            color: var(--color1);
+        }
+        .btn-outline-secondary{
+            i{display: none;}
+        }
+    }
+
+    
+}
+#product-description,
+#product-specs{
+    .container{
+        
+    }
+    
+    p.lead{
+        a{display: none;}
+        color: var(--color1);
+        font-size: var(--h5);
+        font-weight: 600;
+    }
+    .html-clearfix{
+        font-size: var(--font-size);
+        color: var(--txt);
+        margin-bottom: 0;
+        border-bottom: 1px solid var(--color-border);
+    }    
+}
+#product-specs{
+    ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li{margin-bottom: .5rem;}
+    }
 }

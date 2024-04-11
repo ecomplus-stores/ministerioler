@@ -26,3 +26,7 @@ function move(e) {
   const scroll = x - startX;
   this.scrollLeft = scrollLeft - scroll;
 }
+
+window.whatsappRedirect = function(type){
+  alert(type)
+}
