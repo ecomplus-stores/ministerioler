@@ -80,14 +80,107 @@ const searchOrderField = {
     }
   ]
 }
-
+const spacer = [
+  {
+    label: 'Espaçamento da Sessão',
+    name: 'spacing',
+    widget: 'object',
+    fields: [
+      {
+        label: 'Container',
+        required: true,
+        name: 'container',
+        widget: 'select',
+        options: ["container","container-fluid","container_90"]
+      },
+      {
+        label: 'Desktop',
+        name: 'desktop',
+        widget: 'object',
+        fields: [
+          {
+            label: 'Margem Superior',
+            required: true,
+            name: 'margin_top',
+            widget: 'select',
+            required: false,
+            options: ["0","1","2","3","4","5"]
+          },  
+          {
+            label: 'Margem Inferior',
+            required: true,
+            name: 'margin_bottom',
+            widget: 'select',
+            required: false,
+            options: ["0","1","2","3","4","5"]
+          },  
+          {
+            label: 'Espaçamento Superior',
+            required: true,
+            name: 'padding_top',
+            widget: 'select',
+            required: false,
+            options: ["0","1","2","3","4","5"]
+          },  
+          {
+            label: 'Espaçamento Inferior',
+            required: true,
+            name: 'padding_bottom',
+            widget: 'select',
+            required: false,
+            options: ["0","1","2","3","4","5"]
+          },
+        ]
+      },
+      {
+        label: 'Mobile',
+        name: 'mobile',
+        widget: 'object',
+        fields: [
+          {
+            label: 'Margem Superior',
+            required: true,
+            name: 'margin_top',
+            widget: 'select',
+            required: false,
+            options: ["0","1","2","3","4","5"]
+          },  
+          {
+            label: 'Margem Inferior',
+            required: true,
+            name: 'margin_bottom',
+            widget: 'select',
+            required: false,
+            options: ["0","1","2","3","4","5"]
+          },  
+          {
+            label: 'Espaçamento Superior',
+            required: true,
+            name: 'padding_top',
+            widget: 'select',
+            required: false,
+            options: ["0","1","2","3","4","5"]
+          },  
+          {
+            label: 'Espaçamento Inferior',
+            required: true,
+            name: 'padding_bottom',
+            widget: 'select',
+            required: false,
+            options: ["0","1","2","3","4","5"]
+          },
+        ]
+      },
+    ]
+  }, 
+]
 export default ({ state }) => [
   {
     label: 'Banner responsivo',
     name: 'responsive-banner',
     widget: 'object',
     icon: 'https://api.iconify.design/bi:file-image.svg',
-    fields: bannerFields
+    fields: [...spacer,...bannerFields]
   },
   {
     label: 'Grid de banners',
@@ -99,7 +192,7 @@ export default ({ state }) => [
         label: 'Banners',
         name: 'banners',
         widget: 'list',
-        fields: bannerFields
+        fields: [...spacer,...bannerFields]
       }
     ]
   },
@@ -145,7 +238,8 @@ export default ({ state }) => [
             default: '',
             date_format: 'DD/MM/YYYY',
             time_format: 'HH:mm'
-          }
+          },
+          
         ])
       },
       {
@@ -162,76 +256,11 @@ export default ({ state }) => [
         name: 'full_width',
         widget: 'boolean',
         default: false
-      }
+      },
+      ...spacer
     ]
   },
-  {
-    label: 'Temporizador de ofertas',
-    name: 'offers-timer',
-    widget: 'object',
-    icon: 'https://api.iconify.design/bi:stopwatch.svg',
-    fields: [
-      {
-        label: 'Ofertas',
-        name: 'offers',
-        widget: 'list',
-        field: {
-          label: 'SKU do produto',
-          name: 'product_id',
-          widget: 'select',
-          options: state.routes
-            .filter(({ sku }) => typeof sku === 'string')
-            .map(({ _id, sku }) => ({
-              label: sku,
-              value: _id
-            }))
-        }
-      },
-      {
-        label: 'Data de início',
-        required: false,
-        name: 'start',
-        widget: 'datetime',
-        date_format: 'DD/MM/YYYY',
-        time_format: 'HH:mm'
-      },
-      {
-        label: 'Data de encerramento',
-        name: 'end',
-        widget: 'datetime',
-        date_format: 'DD/MM/YYYY',
-        time_format: 'HH:mm'
-      },
-      {
-        label: 'Notas',
-        required: false,
-        name: 'notes',
-        hint: 'Descrição auxiliar sobre a promoção',
-        widget: 'text'
-      },
-      {
-        label: 'Máximo de horas',
-        name: 'max_hours',
-        hint: 'Tempo máximo exibido no contador',
-        widget: 'number',
-        default: 24
-      }
-    ]
-  },
-  {
-    label: 'Barra de informações',
-    name: 'info-bar',
-    widget: 'object',
-    icon: 'https://api.iconify.design/bi:info-square.svg',
-    fields: [
-      {
-        label: 'Exibir barra de informações',
-        name: 'enabled',
-        widget: 'boolean',
-        default: true
-      }
-    ]
-  },
+  
   {
     label: 'Estante de produtos',
     name: 'collection-shelf',
@@ -319,84 +348,11 @@ export default ({ state }) => [
         min: 0,
         step: 1000,
         widget: 'number'
-      }
+      },
+      ...spacer
     ]
   },
-  {
-    label: 'Multi estante de produtos',
-    name: 'shelfs-nav',
-    widget: 'object',
-    icon: 'https://api.iconify.design/bi:bag-check.svg',
-    fields: [
-      {
-        label: 'Coleções de produtos',
-        required: true,
-        name: 'collection_ids',
-        widget: 'select',
-        multiple: true,
-        options: [{
-          resource: 'collections',
-          label: ''
-        }, {
-          resource: 'categories',
-          label: 'Categoria: '
-        }, {
-          resource: 'brands',
-          label: 'Marca: '
-        }].reduce((options, shelf) => {
-          state.routes.forEach(({ _id, resource, name, path }) => {
-            if (resource === shelf.resource) {
-              options.push({
-                label: shelf.label + name,
-                value: `${_id}:${resource}:${name}:${path}`
-              })
-            }
-          })
-          return options
-        }, [])
-      },
-      searchOrderField,
-      {
-        label: 'Título da multi estante',
-        required: false,
-        name: 'shelfs_title',
-        widget: 'string'
-      },
-      {
-        label: 'Embaralhar produtos',
-        name: 'shuffle',
-        widget: 'boolean',
-        default: false
-      },
-      {
-        label: 'Limite de itens',
-        required: false,
-        name: 'limit',
-        widget: 'number',
-        min: 1,
-        max: 12,
-        default: 8
-      },
-      {
-        label: 'Paginação',
-        required: false,
-        name: 'page',
-        hint: 'Aumente o número da página para pular os itens iniciais e repetir estantes com a mesma coleção',
-        widget: 'number',
-        min: 1,
-        default: 1
-      },
-      {
-        label: 'Carousel autoplay',
-        required: false,
-        name: 'autoplay',
-        hint: 'Exibição de cada página em milisegundos, 0 desativa o autoplay',
-        min: 0,
-        step: 1000,
-        widget: 'number'
-      }
-    ]
-  },
+  
   {
     label: 'Vitrine dinâmica',
     name: 'dynamic-showcase',
@@ -410,56 +366,11 @@ export default ({ state }) => [
         widget: 'boolean',
         default: true,
         hint: 'Carrega mais itens automaticamente com scroll da página'
-      }
+      },
+      ...spacer
     ]
   },
-  {
-    label: 'Carrossel de marcas',
-    name: 'brands-carousel',
-    widget: 'object',
-    icon: 'https://api.iconify.design/mdi:copyright.svg',
-    fields: [
-      {
-        label: 'Ordenação',
-        required: false,
-        name: 'sort',
-        widget: 'select',
-        options: [
-          {
-            label: 'Padrão',
-            value: ''
-          },
-          {
-            label: 'Alfabética',
-            value: 'name'
-          }
-        ]
-      },
-      {
-        label: 'Limite de marcas',
-        name: 'limit',
-        widget: 'number',
-        min: 1,
-        max: 48,
-        default: 24
-      },
-      {
-        label: 'Offset de marcas',
-        name: 'offset',
-        widget: 'hidden',
-        default: 0
-      },
-      {
-        label: 'Carousel autoplay',
-        required: false,
-        name: 'autoplay',
-        hint: 'Exibição de cada página em milisegundos, 0 desativa o autoplay',
-        min: 0,
-        step: 1000,
-        widget: 'number'
-      }
-    ]
-  },
+  
   {
     label: 'Breadcrumbs',
     name: 'breadcrumbs',
@@ -640,7 +551,7 @@ export default ({ state }) => [
         hint: 'Tempo máximo exibido no contador',
         widget: 'number',
         default: 24
-      }
+      },...spacer
     ]
   }
 ]

@@ -184,19 +184,7 @@
         }
       ]
     },
-    {
-      "type": "offers-timer",
-      "max_hours": 48,
-      "start": "2024-03-20T02:46:44.975Z",
-      "end": "2024-05-05T02:46:44.988Z",
-      "offers": [
-        "65f1f14587ab487fbfe42c16",
-        "65f1f14587ab487fbfe42c16",
-        "65f1f14587ab487fbfe42c16",
-        "65f1f14587ab487fbfe42c16",
-        "65f1f14587ab487fbfe42c16"
-      ]
-    },
+   
     {
       "type": "apx_responsive-banner",
       "desktop": {
