@@ -621,7 +621,7 @@ export default options => {
     },
     {
       label: 'Estante de produtos com Timer',
-      name: 'collection-shelf',
+      name: 'apx-timer-collection-shelf',
       widget: 'object',
       fields: [
         {
