@@ -50,6 +50,7 @@ const animations = [
   "slideInUp"
 ]
 
+
 const spacer = [
   {
     label: 'Espaçamento da Sessão',
