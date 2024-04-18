@@ -793,6 +793,11 @@ ul.app_contacts{
     
     
     .discount-applier__form{
+        .btn-outline-success{
+            border-radius: 0 5px 5px 0;
+            border: 0;
+            background: var(--wht);
+        }
         label{
             font-size: var(--font-size);
             font-weight: 600;
@@ -853,6 +858,9 @@ ul.app_contacts{
                     font-weight: 600;
                 }
             }
+        }
+        .cart__info + .cart__discount{
+            padding: 0 1rem;
         }
         .cart__info{
             .prices__value{
