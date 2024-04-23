@@ -54,27 +54,28 @@ const hasAllDepartments = header.menu_all_departments
 
 <div id="overlay" class="fade"></div>
 
-<div class="top-bar">
-  <% if (header.marketing_stripe) { %>
-    <% if (header.marketing_stripe.text) { %>
-      <% if (header.marketing_stripe.link) { %>
-        <a
-          class="top-bar__countdown"
-          style="<%= marketingStripeStyle %>"
-          href="<%= header.marketing_stripe.link %>"
-        >
-          <%= header.marketing_stripe.text %>
-        </a>
-      <% } else { %>
-        <div class="top-bar__countdown" style="<%= marketingStripeStyle %>">
-          <%= header.marketing_stripe.text %>
-        </div>
-      <% } %>
-    <% } %>
-  <% } %>
-</div>
+
 
 <header class="header p-0" id="header">
+  <div class="top-bar">
+    <% if (header.marketing_stripe) { %>
+      <% if (header.marketing_stripe.text) { %>
+        <% if (header.marketing_stripe.link) { %>
+          <a
+            class="top-bar__countdown"
+            style="<%= marketingStripeStyle %>"
+            href="<%= header.marketing_stripe.link %>"
+          >
+            <%= header.marketing_stripe.text %>
+          </a>
+        <% } else { %>
+          <div class="top-bar__countdown" style="<%= marketingStripeStyle %>">
+            <%= header.marketing_stripe.text %>
+          </div>
+        <% } %>
+      <% } %>
+    <% } %>
+  </div>
   <div class="header__container container_90">
     <div class="header__row row<%= isCentralizedLogo ? ' header__row--centralized-logo' : '' %><%= isCentralizedLogo && isCategoriesNavFull ? ' header__row--full-width' : '' %>">
       <div class="col-auto p-0 header__toggler-block d-none">

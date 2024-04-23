@@ -30,3 +30,32 @@ function move(e) {
 window.whatsappRedirect = function(type){
   alert(type)
 }
+
+$(document).ready(function(){
+  $('.products-carousel__list').addClass('owl-carousel')
+  $('.products-carousel__list').owlCarousel({
+    loop:true,
+    margin:20,
+    responsiveClass:true,
+    
+    responsive:{
+        0:{
+            items:2,
+            nav:false
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:5,
+            dots:false,
+            nav:false,
+            loop:true
+        }
+    }
+  });
+
+  $('body').css('--header-vh-main', ($('header#header').innerHeight()) + 'px');
+});
+

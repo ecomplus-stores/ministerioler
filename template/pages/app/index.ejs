@@ -13,7 +13,7 @@ const logo = _.settings.logo
   <%- await include('@/head') %>
 </head>
 
-<body class="app">
+<body class="app <%= JSON.stringify(_.state) %>">
   <header class="app__header">
     <div class="container-fluid">
       <div class="row">
