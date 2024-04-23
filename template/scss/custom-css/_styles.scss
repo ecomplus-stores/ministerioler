@@ -212,6 +212,7 @@ main .top-bar a.top-bar__countdown{
             position: relative;
             picture{top: 0;left: 0;}
             picture, img{height: 100%;max-height:unset;width: auto;display:block;width:100%}
+            img{object-fit: contain;}
         }
         .product-card__name{
             font-size: var(--font-size);
@@ -1830,6 +1831,7 @@ body .search__box{
                         height: auto;
                         picture{
                             width: 80px;
+                            
                         }
                     }
                 }
