@@ -305,6 +305,25 @@ const hasAllDepartments = header.menu_all_departments
       
     </div>
   </div>
+  <div id="favorites-quickview">
+    <div class="backdrop"></div>
+    <aside class="favorites__aside card shadow">
+      <header class="card-header">
+        <div class="row apx-side-heading">
+          <div class="col">
+            <span>Favoritos</span>
+          </div>
+          <div class="col-auto">
+            <button type="button" aria-label="Fechar" class="close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 6L6 18M6 6L18 18" stroke="#131313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+          </div>
+        </div>
+      </header>
+      <article class="favorites__body card-body">
+                    
+      </article>      
+    </aside>
+  </div>
+
 </header>
 <% if (header.popup) { %>
   <div class="modal fade" id="popup-modal" tabindex="-1" role="dialog" aria-labelledby="modal-popup" aria-hidden="true">
