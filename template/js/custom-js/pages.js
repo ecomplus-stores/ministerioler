@@ -36,37 +36,46 @@ window.whatsappRedirect = function(type){
 }
 
 $(document).ready(function(){
-  $('.products-carousel__list').addClass('owl-carousel')
-  $('.products-carousel__list').owlCarousel({
-    loop:true,
-    margin:20,
-    responsiveClass:true,
-    
-    responsive:{
-        0:{
-            items:2,
-            nav:false
-        },
-        600:{
-            items:3,
-            nav:false
-        },
-        1000:{
-            items:5,
-            dots:false,
-            nav:false,
-            loop:true
-        }
-    }
-  });
+  if(window.innerWidth > 990){
+    $('.products-carousel__list').addClass('owl-carousel')
+    $('.products-carousel__list').owlCarousel({
+      loop:true,
+      margin:20,
+      responsiveClass:true,
+      
+      responsive:{
+          0:{
+              items:2,
+              nav:false,
+              stagePadding:0,
+              margin:15
+          },
+          600:{
+              items:3,
+              nav:false
+          },
+          1000:{
+              items:5,
+              dots:false,
+              nav:false,
+              loop:true
+          }
+      }
+    });
+  }
 
   $('body').css('--header-vh-main', ($('header#header').innerHeight()) + 'px');
+
+  //adiciona nome do usuário aos elementos username
+  const client = EcomPassport.ecomPassport.getCustomer();   
+  $('[username]').text(client.display_name)
 
   placeFavoritesAside();
 });
 
-$('body').on('click','#wishlist-button, .favorites__aside  .apx-side-heading button', function(){
+$('body').on('click','#wishlist-button, .favorites__aside  .apx-side-heading button, #m-toggleFavorites', function(){
   $('#favorites-quickview').toggleClass('visible')
+  $(`#m-toggleFavorites`).toggleClass(`active`)
 });
 
 $('body').on('click','.product-card__favorite-remove', function(){

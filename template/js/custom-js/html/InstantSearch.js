@@ -69,6 +69,12 @@ export default {
   methods: {
     hide () {
       this.$emit('update:is-visible', false)
+      const $toggleSearch = $('#m-toggleSearch')
+
+      if ($toggleSearch.length) {
+       $toggleSearch.removeClass('active')     
+      }
+      
     },
 
     setSearchTerm (term) {
@@ -132,5 +138,24 @@ export default {
       },
       immediate: true
     }
-  }
+  },
+  mounted() {
+    const $input = $('#search-input-m')
+    const $toggleSearch = $('#m-toggleSearch')
+    if ($input.length) {
+      $input.on('click', () => {
+        this.$emit('update:is-visible', true)
+        $toggleSearch.addClass('active')        
+      })
+    }
+
+    
+
+    if ($toggleSearch.length) {
+      $toggleSearch.on('click', () => {
+        $toggleSearch.toggleClass('active')        
+        this.$emit('update:is-visible', !this.isVisible)
+      })
+    }
+  },
 }

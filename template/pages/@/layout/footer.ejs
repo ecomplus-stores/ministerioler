@@ -6,20 +6,20 @@ const themeCustom = _.settings.theme.custom || ''
 %>
 
 <footer class="footer">
-  <div class="newsletter py-4 mb-5">
+  <div class="newsletter py-4 mb-md-5 mb-4">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-auto">
+        <div class="col-12 col-md-auto">
           <h4 class="m-md-0 mb-3">Receba novidades e promoções</h4>
         </div>
-        <div class="col mx-md-4">
+        <div class="col-12 col-md mx-md-4 mb-md-0 mb-3">
           <form action="" class="py-2 px-3">
             <input type="email" placeholder="Digite seu email..." class="py-1">
-            <button type="button">Assinar <img src="./assets/arrow-right.svg"/></button>
+            <button type="button"><span class="d-none d-md-block">Assinar</span> <img src="./assets/arrow-right.svg"/></button>
           </form>
         </div>
         <% if (footer.contacts.socials) { %>
-          <div class="col-auto">
+          <div class="col-12 col-md-auto">
             <p class="footer__social m-0">
               <%- await include('@/layout/inc/networks', { _, contacts }) %>
             </p>
@@ -85,7 +85,7 @@ const themeCustom = _.settings.theme.custom || ''
               </li>
             <% } %>
             <% if (footer.contacts.address) { %>
-              <li>
+              <li class="d-md-flex d-none">
                 <span class="footer__list-icon">
                   <img src="./assets/footer_address.svg"/>
                 </span>
@@ -100,7 +100,7 @@ const themeCustom = _.settings.theme.custom || ''
                 <img src="./assets/footer_clock.svg"/>
               </span>
               <p>
-                <small>Horário de Atendimento</small>
+                <small>Atendimento</small>
                 Seg. à Sex. das 8h às 17h
               </p>
             </li>
@@ -109,6 +109,7 @@ const themeCustom = _.settings.theme.custom || ''
           
         </div>
       </div>
+      <hr class="mt-1 d-md-none d-block">
       <div class="col-12 col-md-8 offset-md-1">
         <div class="row">
           <% if (footer.links_1.list_pages || footer.links_1.list.find(({ url }) => url)) { %>
@@ -122,6 +123,11 @@ const themeCustom = _.settings.theme.custom || ''
                   aria-controls="footer-pages"
                 >
                   <%= footer.links_1.title || _.dictionary('pages') %>
+                  <button type="button" class="d-inline d-md-none">                    
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 7.5L10 12.5L15 7.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>  
+                  </button>
                 </a>
                 <div class="collapse" id="footer-pages">
                   <% if (footer.links_1.list_pages) { %>
@@ -163,6 +169,11 @@ const themeCustom = _.settings.theme.custom || ''
                   aria-controls="footer-categories"
                 >
                   <%= footer.links_2.title || _.dictionary('categories') %>
+                  <button type="button" class="d-inline d-md-none">                    
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 7.5L10 12.5L15 7.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>  
+                  </button>
                 </a>
                 <div class="collapse" id="footer-categories">
                   <% if (footer.links_2.list_categories) { %>
@@ -196,16 +207,42 @@ const themeCustom = _.settings.theme.custom || ''
       
             <div class="col-12 col-md">
               <div class="">
-                <h5 class="footer__title">Pagamento</h5>
-                <p class="footer__payment-methods">
+                <a
+                  class="footer__title"
+                  data-toggle="collapse"
+                  href="#footer-payments"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="footer-payments"
+                >Pagamento
+                <button type="button" class="d-inline d-md-none">                    
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 7.5L10 12.5L15 7.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>  
+                </button>
+                </a>
+                <p class="footer__payment-methods collapse" id="footer-payments">
                   <% Object.keys(footer.payment_methods).forEach(method => { %>
                     <% if (footer.payment_methods[method]) { %>
                       <i class="pay-icon pay-icon--<%= method %>"></i>
                     <% } %>
                   <% }) %>
                 </p>
-                <h5 class="footer__title">Segurança</h5>
-                <div class="footer__stamps">
+                <a
+                  class="footer__title"
+                  data-toggle="collapse"
+                  href="#footer-security"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="footer-security"
+                >Segurança
+                <button type="button" class="d-inline d-md-none">                    
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 7.5L10 12.5L15 7.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>  
+                </button>
+                </a>
+                <div class="footer__stamps collapse" id="footer-security">
                   <%- await include(`@/sections/stamps`, { _, opt: { stamps: footer.stamps } }) %>
                 </div>
               </div>
@@ -218,7 +255,7 @@ const themeCustom = _.settings.theme.custom || ''
     <div class="footer__credits">
       <div class="p-0 w-100">
         <div class="row align-items-center credits">
-          <div class="col">
+          <div class="col-12 col-md">
             <span>
               <small>
                 <%- footer.credits || `© ${_.store.name} / ${contacts.address} / ${contacts.doc_number}` %>

@@ -11,15 +11,6 @@ body{
     --color-bg: #f8f8f8;
     --body-bg: #f8f8f8;
 
-    --h1:2.488rem;
-    --h2:2.074rem;
-    --h3:1.728rem;
-    --h4:1.44rem;
-    --h5:1.2rem;
-    --h6:1.2rem;
-    --font-size:1rem;
-    --font-size-sm: 0.833rem;
-    --smallest: 0.694rem;
 
     --content-max-width:81.25rem;
 
@@ -32,14 +23,14 @@ body{
 .btn-light.focus, .btn-light:focus, .btn-light:hover {
     background-color: var(--gray-dark);    
 }
-@media(max-width:990px){
-    body{        
-        --h1:1.476rem;
-        --h2:1.383rem;
-        --h3:1.296rem;
-        --h4:1.215rem;
-        --h5:1.138rem;
-        --h6:1.067rem;
+@media(min-width:990px){
+    :root{
+        --h1:2.488rem;
+        --h2:2.074rem;
+        --h3:1.728rem;
+        --h4:1.44rem;
+        --h5:1.2rem;
+        --h6:1.2rem;
         --font-size:1rem;
         --font-size-sm: 0.833rem;
         --smallest: 0.694rem;
@@ -2005,4 +1996,281 @@ border: 3px solid #f2f2f2;
     height: calc(100dvh - var(--header-vh-main));
     bottom: 0;
     top: auto;    
+}
+
+#mobile-home-functions{
+    margin: 1.5rem 0;
+    .mobile-search{
+        .mobile-search-heading{
+            *{line-height: initial;}
+            small{
+                color: var(--txt);
+                font-size: var(--font-size);
+                display: block;                
+            }
+            b{
+                font-size: var(--h5);
+            }
+        }
+        form{
+            border-radius: .313rem;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            input{
+                border-radius: .313rem;
+                border: 0;
+                font-size: var(--font-size-sm);
+                height: 38px;
+            }
+            button{
+                border: 0;
+                background: transparent;
+                padding: 0 .7rem;
+            }
+        }
+    }
+    
+    .header__mobile_nav{
+        display: flex;
+        gap: .5rem;
+        margin: 0 calc(-5% - 20px);
+        padding: 0 calc(5% + 20px);
+        overflow-x: scroll;
+        div:first-child{
+            a{
+                border: 2px solid var(--color1);
+                color: var(--color1);
+            }
+        }
+        a{
+            border: 1px solid var(--border-color);
+            color: var(--blk);
+            font-size: var(--font-size);
+            text-transform: initial;
+            border-radius: .313rem;
+            height: 38px;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+        
+    }
+}
+
+#mobile-nav{
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.1);
+    position: fixed;
+    bottom: 0;
+    z-index: 999999;
+    width: 100%;
+    .d-flex{
+        justify-content: space-around;
+        height: 60px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    button,a{
+        background: transparent;
+        padding: 0;
+        border: 0;
+        border-radius: 5px;
+        height: 36px;
+        width: 36px;
+        display: flex;
+        align-items: center;
+        font-size: 0;
+        justify-content: center;
+    }
+    button.active{
+        background: var(--color1);
+        img{filter: invert(1);}        
+    }
+}
+.header__mobile_nav::-webkit-scrollbar,
+.row.breakline-false::-webkit-scrollbar,
+[data-title="Autores em Destaque"] .row::-webkit-scrollbar,
+.ul__slides::-webkit-scrollbar{display: none;}
+
+@media(max-width:990px){
+    :root{
+        --h1:28.38px;
+        --h2:22.45px;
+        --h3:19.93px;
+        --h4:17.72px;
+        --h5:15.75px;        
+        --font-size:14px;
+        --font-size-sm:12.44px;
+        --smallest:11.06px;
+    }
+    body{
+        padding-bottom: 60px;
+    }
+    .container, .container_90, .products-carousel{
+        max-width: 100%;
+        padding-left: 20px!important;
+        padding-right: 20px!important;
+    }
+    .apx-list-image{
+        .row{
+            gap: 10px;
+            margin: 0;
+        }
+        .item{
+            --font-size:11px;
+            flex: 0 0 calc(25% - 7.5px);
+            max-width: calc(25% - 7.5px);
+            padding: 0;
+        }
+    }
+    .products-carousel__item{
+        padding: 0!important;
+        
+    }
+    
+    .products-carousel{
+        .ul__slides{
+            overflow-x: scroll;
+            gap: 15px;
+            margin-left: -20px;
+            padding-left: 20px;
+            margin-right: -20px;
+            padding-right: 23px;
+            
+            .ul__slide{
+                max-width: 200px;
+                width: 200px;
+                min-width: 200px;
+            }
+        }
+        .product-item{
+            .product-card{
+                border: 1px solid var(--border-color);
+                .product-card__favorite{height: 16px;width: 16px;}
+            }
+        }
+    }
+    .row.grid-type-5{
+        gap: 15px;
+        .item{
+            flex: 0 0 70%;
+            max-width: 70%;
+            padding: 0;
+        }
+    }
+    [data-title="Autores em Destaque"]{
+        .row{
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+        }
+    }
+    .newsletter {
+        text-align: center;
+        .footer__social{
+            justify-content: center;
+        }
+    }
+    .footer > .container > .row{
+        flex-direction: column-reverse;
+        hr{
+            border-color: var(--color-border);
+            width: 100vw;
+            margin-left: -5px;
+            margin-right: -5px;
+        }
+    }
+
+    .footer__contacts{
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row!important;
+            gap: 0!important;
+            align-items: flex-start;
+            margin: 0;
+            li{
+                width: 50%;
+                flex: 0 0 50%;
+                padding: 1rem .5rem;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                --font-size:var(--font-size-sm);
+                
+            }
+        }
+    }
+    .footer{
+        .footer__links{margin-bottom: 2rem;}
+        .footer__title{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 0;
+            padding: 0;
+            button{padding: 0;border: 0;background: transparent;}
+        }
+        .footer__title:after{display: none;}
+        .footer__credits{
+            margin: 0 -20px;
+            text-align: center;
+            justify-content: center;
+            .credits{
+                gap: 1rem;
+                justify-content: center;
+            }
+        }
+    }
+
+    header#header{
+        padding: 0;
+        .header__container{padding: 4px 0 0 0;}
+        .top-bar{margin: 0;}
+        .header__toggler{padding: 0;margin: 0;width: fit-content;min-width: unset;}
+        .header__row{margin: 0;}
+        .header__row > div{padding: 0;}
+        .header__logo-block{
+            text-align: center;
+            padding: 0!important;
+            a{
+                display: block;
+                text-align: center;
+                
+            }
+            #logo{
+                height: 20px;
+            }
+        }
+        .header__buttons{
+            justify-content: flex-end;
+            text-align: right;
+            .btn .badge{
+                height: 14px;
+                width: 14px;
+                font-size: 9px;
+                top: 2px;
+                right: -6px;
+            }
+            a{padding:0;margin: 0;}
+        }
+        .header__search{margin: 0!important;}
+        
+    }
+    body #cart-quickview .minicart__aside, body #favorites-quickview .minicart__aside,
+    #menu{
+        bottom: 60px;
+        height: calc(100dvh - 60px - var(--header-vh-main));
+    }
+
+    .banner{
+        .content{
+            padding: 1.5rem;
+        }
+        .left_image{
+            flex-direction: column-reverse;
+        }
+    }
 }

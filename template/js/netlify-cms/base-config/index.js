@@ -59,7 +59,7 @@ const spacer = [
     fields: [
       {
         label: 'Container',
-        required: true,
+        required: false,
         name: 'container',
         widget: 'select',
         options: ["container","container-fluid","container_90"]
@@ -68,10 +68,11 @@ const spacer = [
         label: 'Desktop',
         name: 'desktop',
         widget: 'object',
+        required: false,
         fields: [
           {
             label: 'Margem Superior',
-            required: true,
+            
             name: 'margin_top',
             widget: 'select',
             required: false,
@@ -79,7 +80,7 @@ const spacer = [
           },  
           {
             label: 'Margem Inferior',
-            required: true,
+            
             name: 'margin_bottom',
             widget: 'select',
             required: false,
@@ -87,7 +88,7 @@ const spacer = [
           },  
           {
             label: 'Espaçamento Superior',
-            required: true,
+            
             name: 'padding_top',
             widget: 'select',
             required: false,
@@ -95,7 +96,7 @@ const spacer = [
           },  
           {
             label: 'Espaçamento Inferior',
-            required: true,
+            
             name: 'padding_bottom',
             widget: 'select',
             required: false,
@@ -107,10 +108,10 @@ const spacer = [
         label: 'Mobile',
         name: 'mobile',
         widget: 'object',
+        required: false,
         fields: [
           {
             label: 'Margem Superior',
-            required: true,
             name: 'margin_top',
             widget: 'select',
             required: false,
@@ -118,7 +119,7 @@ const spacer = [
           },  
           {
             label: 'Margem Inferior',
-            required: true,
+            
             name: 'margin_bottom',
             widget: 'select',
             required: false,
@@ -126,7 +127,7 @@ const spacer = [
           },  
           {
             label: 'Espaçamento Superior',
-            required: true,
+            
             name: 'padding_top',
             widget: 'select',
             required: false,
@@ -134,7 +135,7 @@ const spacer = [
           },  
           {
             label: 'Espaçamento Inferior',
-            required: true,
+            
             name: 'padding_bottom',
             widget: 'select',
             required: false,
@@ -151,6 +152,7 @@ const bannerFields = [
     label: 'Desktop',
     name: 'desktop',
     widget: 'object',
+    required: false,
     fields: [
       {
         label: 'Imagem',
@@ -200,6 +202,7 @@ const bannerFields = [
         label: 'Transparência da Máscara',
         name: 'mask_opacity',
         hint: 'De 0 até 10. 0 é transparente e 10 é totalmente opaco.',
+        required: false,
         min: 0,
         max:10,
         default:0,    
@@ -289,6 +292,7 @@ const bannerFields = [
     label: 'Mobile',
     name: 'mobile',
     widget: 'object',
+    required: false,
     fields: [
       {
         label: 'Imagem',
@@ -343,6 +347,7 @@ const bannerFields = [
         max:10,
         default:0,    
         widget: 'number'
+        required: false,
       },
       {
         label: 'Cor da Máscara',
