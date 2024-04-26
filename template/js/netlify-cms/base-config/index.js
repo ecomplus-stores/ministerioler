@@ -346,7 +346,7 @@ const bannerFields = [
         min: 0,
         max:10,
         default:0,    
-        widget: 'number'
+        widget: 'number',
         required: false,
       },
       {
