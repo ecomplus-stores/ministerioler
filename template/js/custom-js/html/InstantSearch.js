@@ -149,6 +149,13 @@ export default {
       })
     }
 
+    const $input2 = $('#search-input')  
+    if ($input2.length) {
+      $input2.on('click', () => {
+        this.$emit('update:is-visible', true)
+      })
+    }
+
     
 
     if ($toggleSearch.length) {

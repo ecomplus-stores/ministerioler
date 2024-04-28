@@ -141,6 +141,21 @@
       "container": "container",
       "title": "Autores em Destaque",
       "link": "/autores",
+      "spacing":{
+        "container":"container",
+        "desktop":{
+          "margin_top":"4",
+          "margin_bottom":"4",
+          "padding_top":"3",
+          "padding_bottom":"3"
+        },
+        "mobile":{
+          "margin_top":"4",
+          "margin_bottom":"4",
+          "padding_top":"3",
+          "padding_bottom":"3"
+        }
+      },
       "banners": [
         {
           "img": "/img/uploads/rectangle-3.png",
