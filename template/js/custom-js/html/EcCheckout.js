@@ -141,7 +141,8 @@ export default {
       paymentGateways: [],
       loyaltyPointsApplied: {},
       loyaltyPointsAmount: 0,
-      hasMoreOffers: false
+      hasMoreOffers: false,
+      summaryVisible: false
     }
   },
 
@@ -341,6 +342,10 @@ export default {
         }
       }
       this.$emit('checkout', transaction)
+    },
+
+    toggleSummarySm (){
+      this.summaryVisible = !this.summaryVisible 
     }
   },
 
@@ -400,5 +405,8 @@ export default {
         })
       })
     })
+  },
+  mounted(){
+    
   }
 }

@@ -53,6 +53,27 @@ const animations = [
 
 const spacer = [
   {
+    label: 'Visível em...',
+    name: 'visibility',
+    widget: 'select',
+    required: false,
+    default:'d-block d-md-block',
+    options: [
+      {
+        label: 'Todos os ambientes',
+        value: "d-block d-md-block"
+      },
+      {
+        label: 'Apenas Desktop',
+        value: "d-none d-md-block"
+      },
+      {
+        label: 'Apenas Mobile',
+        value: "d-block d-md-none"
+      },
+    ]
+  },
+  {
     label: 'Espaçamento da Sessão',
     name: 'spacing',
     widget: 'object',

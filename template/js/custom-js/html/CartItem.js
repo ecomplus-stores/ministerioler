@@ -43,6 +43,10 @@ import {
       canUpdateCart: {
         type: Boolean,
         default: true
+      },
+      type: {
+        type: String,
+        default: 'normal'
       }
     },
   

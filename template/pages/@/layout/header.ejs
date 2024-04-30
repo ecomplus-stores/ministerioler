@@ -258,7 +258,7 @@ const hasAllDepartments = header.menu_all_departments
         %>
         <div
           class="d-lg-block col-12 col-lg<%= searchColSize %>"
-          id="search-bar"
+          id="search-bar-apx"
         >
           <form
             class="header__search mt-2 mt-md-3 mt-lg-0"
@@ -367,6 +367,8 @@ if (header.categories_list) {
 }
 
 %>
+
+<% if(_.pageName == "home") { %>
 <div id="mobile-home-functions" class="d-block d-md-none">
   <div class="container">
     <div class="mobile-search mb-3">
@@ -423,6 +425,10 @@ if (header.categories_list) {
     </div>
   </div>
 </div>
+
+
+<% } %>
+
 <div id="mobile-nav" class="d-block d-md-none">
   <div class="d-flex align-items-center justify-content-around">
     <a type="button" href="/">

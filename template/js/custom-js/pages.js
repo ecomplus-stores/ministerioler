@@ -36,6 +36,10 @@ window.whatsappRedirect = function(type){
 }
 
 $(document).ready(function(){
+  if($('.page--categories .category-banner').length > 0 && $(`.page--categories .category-description`).length > 0){
+    $('.page--categories .category-banner, .page--categories .category-description, .page--categories .page-title').wrapAll('<div id=category_heading_box></div>');
+    $(`.page--categories .category-description, .page--categories .page-title`).wrapAll('<div></div>');
+  }
   if(window.innerWidth > 990){
     $('.products-carousel__list').addClass('owl-carousel')
     $('.products-carousel__list').owlCarousel({
@@ -62,13 +66,17 @@ $(document).ready(function(){
           }
       }
     });
+    
+  }else{
+    
   }
+  
 
   $('body').css('--header-vh-main', ($('header#header').innerHeight()) + 'px');
 
   //adiciona nome do usuário aos elementos username
   const client = EcomPassport.ecomPassport.getCustomer();   
-  $('[username]').text(client.display_name)
+  $('[username]').text(client.display_name || `Visitante` )
 
   placeFavoritesAside();
 });

@@ -56,6 +56,7 @@
                   v-for="item in cart.items"
                   :key="item._id"
                   :item="item"
+                  :type="'quick'"
                 />
               </transition-group>
             </slot>
