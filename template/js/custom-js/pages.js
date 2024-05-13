@@ -46,7 +46,7 @@ $(document).ready(function(){
       loop:true,
       margin:20,
       responsiveClass:true,
-      
+      lazyLoad:true,
       responsive:{
           0:{
               items:2,
@@ -64,8 +64,12 @@ $(document).ready(function(){
               nav:false,
               loop:true
           }
+      },
+      onInitialized: function(){        
+        setTimeout(function(){ $(`.products-carousel__list`).trigger(`refresh.owl.carousel`) }, 750);
       }
     });
+    
     
   }else{
     
@@ -73,6 +77,7 @@ $(document).ready(function(){
   
 
   $('body').css('--header-vh-main', ($('header#header').innerHeight()) + 'px');
+  $('body').css('--inner-width', ($('body').innerWidth()) + 'px');
 
   //adiciona nome do usuário aos elementos username
   const client = EcomPassport.ecomPassport.getCustomer();   
@@ -80,6 +85,10 @@ $(document).ready(function(){
 
   placeFavoritesAside();
 });
+
+$(window).resize(function(){
+  $('body').css('--inner-width', ($('body').innerWidth()) + 'px');
+})
 
 $('body').on('click','#wishlist-button, .favorites__aside  .apx-side-heading button, #m-toggleFavorites', function(){
   $('#favorites-quickview').toggleClass('visible')

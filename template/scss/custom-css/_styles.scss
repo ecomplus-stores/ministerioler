@@ -1,4 +1,5 @@
 // Add your custom CSS here.
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 body{
@@ -50,12 +51,14 @@ body{
 //     max-width: calc(var(--content-max-width) + 30px);    
 // }
 .container,
-.container_90{
+.container_90,
+.container-fluid{
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+    width: 1380px;
 }
 .container .container{max-width: 100%;}
 
@@ -414,7 +417,8 @@ main ~ iframe{display: none;}
     margin-right: auto;
     max-width: 100dvw;
     overflow-x: scroll;
-    padding: 0 6.5%;
+    // padding: 0 6.5%;
+    padding: 0 calc(calc(calc(var(--inner-width) - 1380px) / 2) - -10px);
     position: relative;
     translate: -50% 0;
     width: 100vw;
