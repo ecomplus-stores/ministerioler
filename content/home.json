@@ -5,7 +5,7 @@
     {
       "type": "apx_banners-grid",
       "grid": "3",
-      "visibility":"d-none d-md-block",
+      "visibility": "d-none d-md-block",
       "banners": [
         {
           "desktop": {
@@ -67,6 +67,16 @@
           "img": "/img/uploads/136x136.png",
           "title": "Bíblias"
         }
+      ]
+    },
+    {
+      "type": "offers-timer",
+      "max_hours": 24,
+      "start": "2024-05-13T14:36:52.914Z",
+      "end": "2024-05-24T14:36:43.926Z",
+      "offers": [
+        "65f1f14587ab487fbfe42c16",
+        "660c52d60fc534303de9dd38"
       ]
     },
     {
@@ -142,19 +152,19 @@
       "container": "container",
       "title": "Autores em Destaque",
       "link": "/autores",
-      "spacing":{
-        "container":"container",
-        "desktop":{
-          "margin_top":"4",
-          "margin_bottom":"4",
-          "padding_top":"3",
-          "padding_bottom":"3"
+      "spacing": {
+        "container": "container",
+        "desktop": {
+          "margin_top": "4",
+          "margin_bottom": "4",
+          "padding_top": "3",
+          "padding_bottom": "3"
         },
-        "mobile":{
-          "margin_top":"4",
-          "margin_bottom":"4",
-          "padding_top":"3",
-          "padding_bottom":"3"
+        "mobile": {
+          "margin_top": "4",
+          "margin_bottom": "4",
+          "padding_top": "3",
+          "padding_bottom": "3"
         }
       },
       "banners": [
@@ -200,10 +210,10 @@
         }
       ]
     },
-   
     {
       "type": "apx_responsive-banner",
       "desktop": {
+        "description_color": "#ffffff",
         "animate": "fadeInUp",
         "img": "/img/uploads/group-24.png",
         "content_order": "left_image",
@@ -211,13 +221,13 @@
         "mask_color": "#084f53",
         "btn_text": "Ver Catálogo",
         "btn_text_color": "#ffffff",
-        "description_color": "#ffffff",
         "mask_opacity": 0,
         "title": "Fortaleça seu relacionamento com Deus",
         "title_color": "#ffffff",
-        "description":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. "
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. "
       },
       "mobile": {
+        "description_color": "#ffffff",
         "animate": "fadeInUp",
         "img": "/img/uploads/group-24.png",
         "content_order": "left_image",
@@ -225,12 +235,10 @@
         "mask_color": "#084f53",
         "btn_text": "Ver Catálogo",
         "btn_text_color": "#ffffff",
-        "description_color": "#ffffff",
         "mask_opacity": 0,
         "title": "Fortaleça seu relacionamento com Deus",
         "title_color": "#ffffff",
-        "description":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. "
-     
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. "
       },
       "container": "container_90",
       "padding": "px-0"
