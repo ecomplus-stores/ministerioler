@@ -2512,3 +2512,70 @@ border: 3px solid #f2f2f2;
         }
     }
 }
+
+.bg-timer{
+    background: var(--color1);
+}
+.offers-timer.products-carousel{
+    background: var(--color1);
+    h4{
+        color: #fff;
+    }
+    .timer_{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        .timer__icon{
+            font-weight: bold;
+            font-size: var(--h4);
+            color: #fff;
+        }
+        .timer__count{
+            display: flex;
+            gap: .5rem;
+            background: transparent;
+            span{
+                background: #fff;
+                color: var(--blk);
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+                line-height: calc(var(--h4) * .8);
+                border-radius: 0.313rem;
+                height: 50px;
+                width: 50px;
+                font-size: var(--h4);
+                font-weight: bold;
+                align-items: center;
+                padding-top: 4px;
+
+            }
+            span:after{
+                display: block;
+                font-size: var(--smallest);
+                font-weight: 300;
+                line-height: initial;
+            }
+            span.hh:after{content: "horas";}
+            span.mm:after{content: "min.";}
+            span.ss:after{content: "seg.";}
+        }
+    }
+}
+@media(max-width:990px){
+    .offers-timer > .d-flex{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .offers-timer.products-carousel .timer_{
+        gap: .5rem;
+        .timer__count{
+            
+            span{
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+}

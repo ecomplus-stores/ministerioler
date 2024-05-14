@@ -150,3 +150,40 @@ async function toggleFavoriteFront(el){
     console.log(e)
   }
 }
+
+const $timers = $('.timer_');
+if ($timers.length) {
+  const formatTime_ = timeNumber => timeNumber.toString().padStart(2, '0')
+  $timers.each(function () {
+    const { end, maxHours } = $(this)[0].dataset
+    const diffSeconds = Math.min(
+      (new Date(end).getTime() - Date.now()) / 1000,
+      maxHours * 3600
+    )
+
+    if (diffSeconds > 0) {
+      let hours = Math.floor(diffSeconds / 3600)
+      const hoursAsSeconds_ = hours * 3600
+      let minutes = Math.floor((diffSeconds - hoursAsSeconds_) / 60)
+      let seconds = parseInt(diffSeconds - hoursAsSeconds_ - minutes * 60, 10)
+      const $timerCount_ = $(this).find('.timer__count')
+
+      const updateTimerCount_ = () => {
+        if (seconds > 0) {
+          seconds--
+        } else if (minutes > 0) {
+          minutes--
+          seconds = 59
+        } else if (hours > 0) {
+          hours--
+          seconds = minutes = 59
+        } else {
+          return clearInterval(stopwatch)
+        }
+        $timerCount_.html(`<span class="hh">${formatTime_(hours)}</span><span class="mm">${formatTime_(minutes)}</span><span class="ss">${formatTime_(seconds)}</span>`)
+      }
+      const stopwatch = setInterval(updateTimerCount_, 1000)
+      updateTimerCount_()
+    }
+  })
+}
