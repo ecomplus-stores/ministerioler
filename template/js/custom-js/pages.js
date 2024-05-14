@@ -1,3 +1,13 @@
+$.fn.isInViewport = function () {
+  let elementTop = $(this).offset().top;
+  let elementBottom = elementTop + $(this).outerHeight();
+
+  let viewportTop = $(window).scrollTop();
+  let viewportBottom = viewportTop + $(window).height();
+
+  return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
 const EcomPassport = require('@ecomplus/passport-client')
 
 const search = new EcomSearch()
@@ -46,7 +56,6 @@ $(document).ready(function(){
       loop:true,
       margin:20,
       responsiveClass:true,
-      lazyLoad:true,
       responsive:{
           0:{
               items:2,
@@ -67,6 +76,14 @@ $(document).ready(function(){
       },
       onInitialized: function(){        
         setTimeout(function(){ $(`.products-carousel__list`).trigger(`refresh.owl.carousel`) }, 750);
+        $(window).scroll(function(){
+          $(`.products-carousel__list`).each(function(){
+            if($(this).isInViewport() && !$(this).hasClass(`reinitialized`)){
+              $(this).trigger(`refresh.owl.carousel`)
+              $(this).addClass('reinitialized')
+            }
+          })
+        })
       }
     });
     

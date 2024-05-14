@@ -161,6 +161,50 @@
     </aside>
   </transition>
 
+  <template v-if="term">
+    <div
+      v-if="hasEmptyResult"
+      class="search-engine__no-results mb-4"
+    >
+      <div class="lead mb-2">
+        <span v-if="suggestedTerm">
+          {{ i19didYouMean }}
+          <a
+            href="#"
+            @click.prevent="$emit('update:term', suggestedTerm)"
+            v-text="suggestedTerm"
+          ></a>
+          ?
+        </span>
+        {{ i19noResultsFor }}
+        <em>{{ term }}</em>
+      </div>
+      <h4 v-if="popularItems.length">
+        {{ i19popularProducts }}
+      </h4>
+    </div>
+
+    <div
+      v-else
+      class="search-engine__terms mb-4"
+    >
+      <span
+        v-if="noResultsTerm"
+        class="d-none d-lg-inline"
+      > 
+        {{ i19noResultsFor }}
+        <s>{{ noResultsTerm }}</s>.
+      </span>
+      <span class="d-none d-md-inline">
+        Sua busca por:
+      </span>
+      <h1>{{ term }}</h1>
+    </div>
+  </template>
+
+  <h3 v-else-if="hasEmptyResult && popularItems.length">
+    {{ i19popularProducts }}
+  </h3>
   <transition
     enter-active-class="animated fadeInRight slower"
     leave-active-class="animated fadeOutRight"
@@ -277,50 +321,7 @@
     >
       <div class="container">
         <div class="search-engine__info px-lg-4">
-          <template v-if="term">
-            <div
-              v-if="hasEmptyResult"
-              class="search-engine__no-results"
-            >
-              <div class="lead mb-2">
-                <span v-if="suggestedTerm">
-                  {{ i19didYouMean }}
-                  <a
-                    href="#"
-                    @click.prevent="$emit('update:term', suggestedTerm)"
-                    v-text="suggestedTerm"
-                  ></a>
-                  ?
-                </span>
-                {{ i19noResultsFor }}
-                <em>{{ term }}</em>
-              </div>
-              <h4 v-if="popularItems.length">
-                {{ i19popularProducts }}
-              </h4>
-            </div>
-
-            <div
-              v-else
-              class="search-engine__terms"
-            >
-              <span
-                v-if="noResultsTerm"
-                class="d-none d-lg-inline"
-              >
-                {{ i19noResultsFor }}
-                <s>{{ noResultsTerm }}</s>.
-              </span>
-              <span class="d-none d-md-inline">
-                {{ i19searchingFor }}:
-              </span>
-              <h1>{{ term }}</h1>
-            </div>
-          </template>
-
-          <h3 v-else-if="hasEmptyResult && popularItems.length">
-            {{ i19popularProducts }}
-          </h3>
+          
 
           <transition
             enter-active-class="animated fadeInDown"
@@ -354,11 +355,11 @@
 
         <article
           v-if="canShowItems"
-          class="search-engine__retail"
+          class="search-engine__retail item-retail-row"
         >
           <div class="row">
             <div
-              class="col-6 col-md-4 col-lg-3"
+              class="col-6 col-md-4 col-lg-3 item-retail"
               v-for="(product, i) in suggestedItems"
               :key="product._id"
               :ref="i === pageAnchorIndex ? 'pageAnchor' : null"
