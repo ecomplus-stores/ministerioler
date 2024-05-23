@@ -8,23 +8,42 @@ $.fn.isInViewport = function () {
   return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
+window.sessionStorage.setItem('specSearch', JSON.stringify({
+  hasGroup: true,
+  spec: 'grupo',
+  value: '1'
+}))
+
 const EcomPassport = require('@ecomplus/passport-client')
 import loadCheckDoc from '../check-group'
 const specSearch = JSON.parse(window.sessionStorage.getItem('specSearch') || '{}')
 if (specSearch.hasGroup && specSearch.spec && specSearch.value) {
   window.EcomSearch.dslMiddlewares.push((dsl) => {
     dsl.query.bool.filter.push({
-        "term": {
-          "specs.grid": specSearch.spec
+        "nested": {
+          "path": "specs",
+          "query": {
+            "bool": {
+              "filter": [
+                {
+                  "term": {
+                    "specs.grid": specSearch.spec
+                  }
+                },
+                {
+                  "terms": {
+                    "specs.text": [
+                      specSearch.value
+                    ]
+                  }
+                }
+              ]
+            }
+          }
         }
     })
-    dsl.query.bool.filter.push({
-      "terms": {
-        "specs.text": [
-          specSearch.value
-        ]
-      }
-    })
+
+    console.log(dsl.query.bool.filter)
   })
 } else {
   loadCheckDoc()
