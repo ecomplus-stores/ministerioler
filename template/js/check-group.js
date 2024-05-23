@@ -9,7 +9,7 @@ export default (isCheckout = false) => {
     window.sessionStorage.setItem('isGroup', 1) */
     if (customerDoc && customerDoc !== window.checkedGroupDoc) {
       window.axios.get(
-        'groupCheckhttps://us-central1-search-by-clients-group.cloudfunctions.net/app/check-group' +
+        'https://us-central1-search-by-clients-group.cloudfunctions.net/app/check-group' +
         `?doc=${customerDoc}`
       )
         .then(({ data }) => {
