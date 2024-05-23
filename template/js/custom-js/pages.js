@@ -9,7 +9,7 @@ $.fn.isInViewport = function () {
 };
 
 const EcomPassport = require('@ecomplus/passport-client')
-import loadCheckDoc from './check-group'
+import loadCheckDoc from '../check-group'
 
 loadCheckDoc()
 
