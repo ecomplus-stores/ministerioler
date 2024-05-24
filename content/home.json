@@ -84,7 +84,7 @@
       "shuffle": false,
       "limit": 15,
       "page": 1,
-      "collection_id": "65f1ee9787ab487fbfe42510:categories:Livros:/livros",
+      "collection_id": "",
       "sort": "sales",
       "title": "Promoções",
       "link": "/mais-vendidos"
@@ -142,7 +142,7 @@
       "shuffle": false,
       "limit": 15,
       "page": 1,
-      "collection_id": "65f1ee9787ab487fbfe42510:categories:Livros:/livros",
+      "collection_id": "",
       "sort": "sales",
       "title": "Mais Vendidos",
       "link": "/mais-vendidos"
