@@ -8,6 +8,8 @@ $.fn.isInViewport = function () {
   return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
+
+//Este código está limitando a busca
 window.sessionStorage.setItem('specSearch', JSON.stringify({
   hasGroup: true,
   spec: 'grupo',

@@ -1596,6 +1596,12 @@ body .header__search{
     }
 }
 .header__buttons-block{position: initial;}
+body #instant-search .search__box{
+    height: calc(100dvh - var(--header-vh-main));
+}
+body #instant-search .search__box .search__body{
+    min-height: 0;
+}
 body #favorites-quickview,
 body #cart-quickview{
     position: initial!important;
@@ -2578,4 +2584,15 @@ border: 3px solid #f2f2f2;
             }
         }
     }
+}
+
+body #instant-search .search-engine__no-results{
+    margin: 0;
+    .lead{
+        padding: 0 1.5rem;
+        font-size: 12px;
+        line-height: initial;
+        margin: 0;
+    }
+    h4{display:none}
 }
