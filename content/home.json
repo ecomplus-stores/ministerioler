@@ -94,6 +94,19 @@
       "sort": "sales"
     },
     {
+      "type": "offers-timer",
+      "max_hours": 24,
+      "start": "2024-06-06T17:25:56.385Z",
+      "end": "2024-06-06T17:25:56.510Z",
+      "offers": [
+        "662963fc4e9909015f1f76a7",
+        "6629a1174e9909015f2011f5",
+        "66297b644e9909015f1fb87d",
+        "66296e424e9909015f1f934e",
+        "662995024e9909015f1ff1a4"
+      ]
+    },
+    {
       "type": "collection-shelf",
       "shuffle": true,
       "limit": 20,
@@ -236,19 +249,6 @@
       },
       "container": "container_90",
       "padding": "px-0"
-    },
-    {
-      "type": "offers-timer",
-      "max_hours": 24,
-      "start": "2024-06-06T17:25:56.385Z",
-      "end": "2024-06-06T17:25:56.510Z",
-      "offers": [
-        "662963fc4e9909015f1f76a7",
-        "6629a1174e9909015f2011f5",
-        "66297b644e9909015f1fb87d",
-        "66296e424e9909015f1f934e",
-        "662995024e9909015f1ff1a4"
-      ]
     }
   ]
 }
