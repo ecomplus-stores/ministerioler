@@ -10,8 +10,8 @@
       "type": "collection-shelf",
       "link": "/mais-vendidos",
       "limit": 20,
-      "collection_id": "65f1ee9787ab487fbfe42510:categories:Livros:/livros",
-      "sort": "offers"
+      "collection_id": "665f3c19f4e6d85ab29f1613:collections:TESTE COLEÇÂO:/special-collection",
+      "sort": "sales"
     },
     {
       "type": "collection-shelf",
