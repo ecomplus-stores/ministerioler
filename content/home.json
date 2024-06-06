@@ -18,7 +18,9 @@
       "max_hours": 99,
       "start": "2024-06-06T13:37:55.382Z",
       "end": "2024-06-20T14:36:43.926Z",
-      "offers": []
+      "offers": [
+        "66298ab94e9909015f1fdb97"
+      ]
     },
     {
       "type": "apx_banners-grid",
