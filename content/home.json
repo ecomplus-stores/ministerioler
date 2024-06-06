@@ -43,7 +43,10 @@
         }
       ],
       "breakline": "true",
-      "container": "container"
+      "container": "container",
+      "spacing": {
+        "container": "container-fluid"
+      }
     },
     {
       "type": "apx_list-images",
