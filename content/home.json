@@ -83,6 +83,27 @@
       "container": "container"
     },
     {
+      "autoplay": 1000,
+      "page": 1,
+      "title": "Promoções",
+      "shuffle": true,
+      "type": "collection-shelf",
+      "link": "/mais-vendidos",
+      "limit": 20,
+      "collection_id": "665f3c19f4e6d85ab29f1613:collections:TESTE COLEÇÂO:/special-collection",
+      "sort": "sales"
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": true,
+      "limit": 20,
+      "page": 1,
+      "collection_id": "",
+      "sort": "views",
+      "title": "Mais Vendidos",
+      "link": "/mais-vendidos"
+    },
+    {
       "type": "apx_list-images",
       "container": "container",
       "banners": [
@@ -119,36 +140,6 @@
           "title": "Bíblias"
         }
       ]
-    },
-    {
-      "type": "offers-timer",
-      "max_hours": 24,
-      "start": "2024-06-06T17:25:56.385Z",
-      "end": "2024-06-06T17:25:56.510Z",
-      "offers": [
-        "6629234c4e9909015f1ecda9"
-      ]
-    },
-    {
-      "autoplay": 1000,
-      "page": 1,
-      "title": "Promoções",
-      "shuffle": true,
-      "type": "collection-shelf",
-      "link": "/mais-vendidos",
-      "limit": 20,
-      "collection_id": "665f3c19f4e6d85ab29f1613:collections:TESTE COLEÇÂO:/special-collection",
-      "sort": "sales"
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": true,
-      "limit": 20,
-      "page": 1,
-      "collection_id": "",
-      "sort": "views",
-      "title": "Mais Vendidos",
-      "link": "/mais-vendidos"
     },
     {
       "type": "apx_list-images",
@@ -247,9 +238,17 @@
       "padding": "px-0"
     },
     {
-      "type": "dynamic-showcase",
-      "load_more": true,
-      "sort": "views"
+      "type": "offers-timer",
+      "max_hours": 24,
+      "start": "2024-06-06T17:25:56.385Z",
+      "end": "2024-06-06T17:25:56.510Z",
+      "offers": [
+        "662963fc4e9909015f1f76a7",
+        "6629a1174e9909015f2011f5",
+        "66297b644e9909015f1fb87d",
+        "66296e424e9909015f1f934e",
+        "662995024e9909015f1ff1a4"
+      ]
     }
   ]
 }
