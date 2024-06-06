@@ -42,7 +42,7 @@
           }
         }
       ],
-      "breakline": "false",
+      "breakline": "true",
       "container": "container"
     },
     {
