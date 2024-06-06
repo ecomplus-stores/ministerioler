@@ -19,7 +19,7 @@
     {
       "type": "apx_banners-grid",
       "grid": "3",
-      "visibility": "d-block d-md-block",
+      "visibility": "d-none d-md-block",
       "banners": [
         {
           "desktop": {
