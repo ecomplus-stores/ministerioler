@@ -10,11 +10,11 @@
         {
           "desktop": {
             "mask_opacity": 0,
-            "img": "/img/uploads/image.png"
+            "img": "/img/uploads/destaque.jpg"
           },
           "mobile": {
             "mask_opacity": 0,
-            "img": "/img/uploads/image.png"
+            "img": "/img/uploads/destaque.jpg"
           }
         },
         {
