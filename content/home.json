@@ -3,6 +3,17 @@
   "meta_description": "",
   "sections": [
     {
+      "autoplay": 1000,
+      "page": 1,
+      "title": "Promoções",
+      "shuffle": false,
+      "type": "collection-shelf",
+      "link": "/mais-vendidos",
+      "limit": 20,
+      "collection_id": "65f1eea287ab487fbfe4252b:categories:Promoções:/promocoes",
+      "sort": "sales"
+    },
+    {
       "type": "offers-timer",
       "max_hours": 99,
       "start": "2024-06-06T13:37:55.382Z",
@@ -88,17 +99,6 @@
           "title": "Bíblias"
         }
       ]
-    },
-    {
-      "autoplay": 1000,
-      "page": 1,
-      "title": "Promoções",
-      "shuffle": false,
-      "type": "collection-shelf",
-      "link": "/mais-vendidos",
-      "limit": 20,
-      "collection_id": "",
-      "sort": "offers"
     },
     {
       "type": "apx_banners-grid",
