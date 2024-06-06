@@ -14,36 +14,14 @@
       "sort": "sales"
     },
     {
-      "type": "apx_banners-grid",
-      "grid": "3",
-      "visibility": "d-block d-md-block",
-      "banners": [
-        {
-          "desktop": {
-            "mask_opacity": 0,
-            "img": "/img/uploads/image.png"
-          },
-          "mobile": {
-            "mask_opacity": 0,
-            "img": "/img/uploads/image.png"
-          }
-        },
-        {
-          "desktop": {
-            "mask_opacity": 0,
-            "img": "/img/uploads/image-1-.png"
-          },
-          "mobile": {
-            "mask_opacity": 0,
-            "img": "/img/uploads/image-1-.png"
-          }
-        }
-      ],
-      "breakline": "true",
-      "container": "container",
-      "spacing": {
-        "container": "container-fluid"
-      }
+      "type": "collection-shelf",
+      "shuffle": true,
+      "limit": 20,
+      "page": 1,
+      "collection_id": "",
+      "sort": "views",
+      "title": "Mais Vendidos",
+      "link": "/mais-vendidos"
     },
     {
       "type": "apx_list-images",
@@ -82,6 +60,38 @@
           "title": "Bíblias"
         }
       ]
+    },
+    {
+      "type": "apx_banners-grid",
+      "grid": "3",
+      "visibility": "d-block d-md-block",
+      "banners": [
+        {
+          "desktop": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/image.png"
+          },
+          "mobile": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/image.png"
+          }
+        },
+        {
+          "desktop": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/image-1-.png"
+          },
+          "mobile": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/image-1-.png"
+          }
+        }
+      ],
+      "breakline": "true",
+      "container": "container",
+      "spacing": {
+        "container": "container-fluid"
+      }
     },
     {
       "type": "apx_banners-grid",
@@ -130,16 +140,6 @@
       "grid": "5",
       "breakline": "false",
       "container": "container"
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": true,
-      "limit": 20,
-      "page": 1,
-      "collection_id": "",
-      "sort": "views",
-      "title": "Mais Vendidos",
-      "link": "/mais-vendidos"
     },
     {
       "type": "apx_list-images",
