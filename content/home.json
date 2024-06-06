@@ -236,6 +236,11 @@
       },
       "container": "container_90",
       "padding": "px-0"
+    },
+    {
+      "type": "dynamic-showcase",
+      "load_more": true,
+      "sort": "sales"
     }
   ]
 }
