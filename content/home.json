@@ -14,15 +14,6 @@
       "sort": "sales"
     },
     {
-      "type": "offers-timer",
-      "max_hours": 99,
-      "start": "2024-06-06T13:37:55.382Z",
-      "end": "2024-06-20T14:36:43.926Z",
-      "offers": [
-        "66298ab94e9909015f1fdb97"
-      ]
-    },
-    {
       "type": "apx_banners-grid",
       "grid": "3",
       "visibility": "d-block d-md-block",
