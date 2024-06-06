@@ -241,6 +241,15 @@
       "type": "dynamic-showcase",
       "load_more": true,
       "sort": "views"
+    },
+    {
+      "type": "offers-timer",
+      "max_hours": 24,
+      "start": "2024-06-06T17:25:56.385Z",
+      "end": "2024-06-06T17:25:56.510Z",
+      "offers": [
+        "6629234c4e9909015f1ecda9"
+      ]
     }
   ]
 }
