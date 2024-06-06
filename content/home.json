@@ -80,14 +80,15 @@
       ]
     },
     {
-      "type": "collection-shelf",
-      "shuffle": false,
-      "limit": 15,
+      "autoplay": 1000,
       "page": 1,
-      "collection_id": "",
-      "sort": "offers",
       "title": "Promoções",
-      "link": "/mais-vendidos"
+      "shuffle": false,
+      "type": "collection-shelf",
+      "link": "/mais-vendidos",
+      "limit": 20,
+      "collection_id": "",
+      "sort": "offers"
     },
     {
       "type": "apx_banners-grid",
