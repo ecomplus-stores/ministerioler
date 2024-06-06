@@ -6,12 +6,12 @@
       "autoplay": 1000,
       "page": 1,
       "title": "Promoções",
-      "shuffle": false,
+      "shuffle": true,
       "type": "collection-shelf",
       "link": "/mais-vendidos",
       "limit": 20,
       "collection_id": "665f3c19f4e6d85ab29f1613:collections:TESTE COLEÇÂO:/special-collection",
-      "sort": "sales"
+      "sort": "offers"
     },
     {
       "type": "collection-shelf",
