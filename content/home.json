@@ -73,6 +73,17 @@
       ]
     },
     {
+      "autoplay": 1000,
+      "page": 1,
+      "title": "Promoções",
+      "shuffle": true,
+      "type": "collection-shelf",
+      "link": "/mais-vendidos",
+      "limit": 20,
+      "collection_id": "665f3c19f4e6d85ab29f1613:collections:TESTE COLEÇÂO:/special-collection",
+      "sort": "sales"
+    },
+    {
       "type": "offers-timer",
       "max_hours": 24,
       "start": "2024-06-06T17:25:56.385Z",
@@ -84,17 +95,6 @@
         "66296e424e9909015f1f934e",
         "662995024e9909015f1ff1a4"
       ]
-    },
-    {
-      "autoplay": 1000,
-      "page": 1,
-      "title": "Promoções",
-      "shuffle": true,
-      "type": "collection-shelf",
-      "link": "/mais-vendidos",
-      "limit": 20,
-      "collection_id": "665f3c19f4e6d85ab29f1613:collections:TESTE COLEÇÂO:/special-collection",
-      "sort": "sales"
     },
     {
       "type": "apx_banners-grid",
