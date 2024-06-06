@@ -3,6 +3,16 @@
   "meta_description": "",
   "sections": [
     {
+      "type": "offers-timer",
+      "max_hours": 99,
+      "start": "2024-06-06T13:05:34.202Z",
+      "end": "2024-06-20T14:36:43.926Z",
+      "offers": [
+        "662920f64e9909015f1ec9f1",
+        "662923544e9909015f1ecdc1"
+      ]
+    },
+    {
       "type": "apx_banners-grid",
       "grid": "3",
       "visibility": "d-block d-md-block",
@@ -67,16 +77,6 @@
           "img": "/img/uploads/136x136.png",
           "title": "Bíblias"
         }
-      ]
-    },
-    {
-      "type": "offers-timer",
-      "max_hours": 99,
-      "start": "2024-06-06T13:05:34.202Z",
-      "end": "2024-06-20T14:36:43.926Z",
-      "offers": [
-        "662920f64e9909015f1ec9f1",
-        "662923544e9909015f1ecdc1"
       ]
     },
     {
