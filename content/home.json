@@ -3,65 +3,6 @@
   "meta_description": "",
   "sections": [
     {
-      "autoplay": 1000,
-      "page": 1,
-      "title": "Promoções",
-      "shuffle": true,
-      "type": "collection-shelf",
-      "link": "/mais-vendidos",
-      "limit": 20,
-      "collection_id": "665f3c19f4e6d85ab29f1613:collections:TESTE COLEÇÂO:/special-collection",
-      "sort": "sales"
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": true,
-      "limit": 20,
-      "page": 1,
-      "collection_id": "",
-      "sort": "views",
-      "title": "Mais Vendidos",
-      "link": "/mais-vendidos"
-    },
-    {
-      "type": "apx_list-images",
-      "container": "container",
-      "banners": [
-        {
-          "img": "/img/uploads/136x136.png",
-          "title": "Bíblias"
-        },
-        {
-          "img": "/img/uploads/136x136.png",
-          "title": "Bíblias"
-        },
-        {
-          "img": "/img/uploads/136x136.png",
-          "title": "Bíblias"
-        },
-        {
-          "img": "/img/uploads/136x136.png",
-          "title": "Bíblias"
-        },
-        {
-          "img": "/img/uploads/136x136.png",
-          "title": "Bíblias"
-        },
-        {
-          "img": "/img/uploads/136x136.png",
-          "title": "Bíblias"
-        },
-        {
-          "img": "/img/uploads/136x136.png",
-          "title": "Bíblias"
-        },
-        {
-          "img": "/img/uploads/136x136.png",
-          "title": "Bíblias"
-        }
-      ]
-    },
-    {
       "type": "apx_banners-grid",
       "grid": "3",
       "visibility": "d-block d-md-block",
@@ -140,6 +81,65 @@
       "grid": "5",
       "breakline": "false",
       "container": "container"
+    },
+    {
+      "autoplay": 1000,
+      "page": 1,
+      "title": "Promoções",
+      "shuffle": true,
+      "type": "collection-shelf",
+      "link": "/mais-vendidos",
+      "limit": 20,
+      "collection_id": "665f3c19f4e6d85ab29f1613:collections:TESTE COLEÇÂO:/special-collection",
+      "sort": "sales"
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": true,
+      "limit": 20,
+      "page": 1,
+      "collection_id": "",
+      "sort": "views",
+      "title": "Mais Vendidos",
+      "link": "/mais-vendidos"
+    },
+    {
+      "type": "apx_list-images",
+      "container": "container",
+      "banners": [
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        },
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        },
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        },
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        },
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        },
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        },
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        },
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Bíblias"
+        }
+      ]
     },
     {
       "type": "apx_list-images",
