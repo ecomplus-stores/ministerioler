@@ -40,11 +40,11 @@
       "banners": [
         {
           "img": "/img/uploads/136x136.png",
-          "title": "Bíblias"
+          "title": "Classical Press"
         },
         {
           "img": "/img/uploads/136x136.png",
-          "title": "Bíblias"
+          "title": "Aconselhamento Bíblico"
         },
         {
           "img": "/img/uploads/136x136.png",
@@ -82,19 +82,6 @@
       "limit": 20,
       "collection_id": "665f3c19f4e6d85ab29f1613:collections:TESTE COLEÇÂO:/special-collection",
       "sort": "sales"
-    },
-    {
-      "type": "offers-timer",
-      "max_hours": 24,
-      "start": "2024-06-06T17:25:56.385Z",
-      "end": "2024-06-06T17:25:56.510Z",
-      "offers": [
-        "662963fc4e9909015f1f76a7",
-        "6629a1174e9909015f2011f5",
-        "66297b644e9909015f1fb87d",
-        "66296e424e9909015f1f934e",
-        "662995024e9909015f1ff1a4"
-      ]
     },
     {
       "type": "apx_banners-grid",
