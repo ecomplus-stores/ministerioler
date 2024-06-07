@@ -40,27 +40,23 @@
       "banners": [
         {
           "img": "/img/uploads/136x136.png",
-          "title": "Classical Press"
+          "title": "Até R$ 20,00"
         },
         {
           "img": "/img/uploads/136x136.png",
-          "title": "Aconselhamento Bíblico"
+          "title": "Mais vendidos"
         },
         {
           "img": "/img/uploads/136x136.png",
-          "title": "Bíblias"
+          "title": "Lançamentos"
         },
         {
           "img": "/img/uploads/136x136.png",
-          "title": "Bíblias"
+          "title": "Educação cristã"
         },
         {
           "img": "/img/uploads/136x136.png",
-          "title": "Bíblias"
-        },
-        {
-          "img": "/img/uploads/136x136.png",
-          "title": "Bíblias"
+          "title": "Liderança"
         },
         {
           "img": "/img/uploads/136x136.png",
@@ -68,7 +64,11 @@
         },
         {
           "img": "/img/uploads/136x136.png",
-          "title": "Bíblias"
+          "title": "Família"
+        },
+        {
+          "img": "/img/uploads/136x136.png",
+          "title": "Atacado"
         }
       ]
     },
