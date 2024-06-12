@@ -195,7 +195,7 @@
       "limit": 20,
       "page": 1,
       "collection_id": "",
-      "sort": "views",
+      "sort": "sales",
       "title": "Mais Vendidos",
       "link": "/mais-vendidos"
     },
