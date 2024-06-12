@@ -5,7 +5,7 @@
     {
       "type": "apx_banners-grid",
       "grid": "3",
-      "visibility": "d-block d-md-block",
+      "visibility": "d-none d-md-block",
       "banners": [
         {
           "desktop": {
@@ -31,8 +31,20 @@
       "breakline": "true",
       "container": "container",
       "spacing": {
-        "container": "container-fluid"
-      }
+        "container": "container-fluid",
+        "desktop": {
+          "margin_top": "4",
+          "margin_bottom": "0",
+          "padding_top": "2",
+          "padding_bottom": "0"
+        },
+        "mobile": {
+          "margin_top": "4",
+          "margin_bottom": "0",
+          "padding_top": "0",
+          "padding_bottom": "0"
+        }
+      }   
     },
     {
       "type": "apx_list-images",

@@ -1,3 +1,14 @@
+/*!
+ * Simple jQuery Equal Heights
+ *
+ * Copyright (c) 2013 Matt Banks
+ * Dual licensed under the MIT and GPL licenses.
+ * Uses the same license as jQuery, see:
+ * http://docs.jquery.com/License
+ *
+ * @version 1.5.1
+ */
+!function(a){a.fn.equalHeights=function(){var b=0,c=a(this);return c.each(function(){var c=a(this).innerHeight();c>b&&(b=c)}),c.css("height",b)},a("[data-equal]").each(function(){var b=a(this),c=b.data("equal");b.find(c).equalHeights()})}(jQuery);
 $.fn.isInViewport = function () {
   let elementTop = $(this).offset().top;
   let elementBottom = elementTop + $(this).outerHeight();
@@ -88,11 +99,17 @@ window.whatsappRedirect = function(type){
 }
 
 $(document).ready(function(){
+
   if($('.page--categories .category-banner').length > 0 && $(`.page--categories .category-description`).length > 0){
     $('.page--categories .category-banner, .page--categories .category-description, .page--categories .page-title').wrapAll('<div id=category_heading_box></div>');
     $(`.page--categories .category-description, .page--categories .page-title`).wrapAll('<div></div>');
   }
   if(window.innerWidth > 990){
+    $('.products-carousel__list').each(function(){
+      $(this).find('.product-card__name').equalHeights()
+      $(this).find('.product-card__prices').equalHeights()
+      $(this).find('.product-card').equalHeights()
+    })
     $('.products-carousel__list').addClass('owl-carousel')
     $('.products-carousel__list').owlCarousel({
       loop:true,
@@ -229,4 +246,3 @@ if ($timers.length) {
     }
   })
 }
-
