@@ -712,9 +712,10 @@ nav{
     //     }
     // }
     #product-gallery{
+        *{border: 0;}
         .gallery__stage,
         .gallery__item{
-            img{border-radius: .5rem;overflow: hidden;}
+            img{border-radius: .5rem;overflow: hidden;padding:.5rem;background:#fff}
         }
         
     }
@@ -2688,3 +2689,6 @@ body #instant-search .search-engine__no-results{
     input{outline: 0px!important;}
 }
 
+@media(max-width:990px){
+    .product-card__name{--max-lines:2}
+}

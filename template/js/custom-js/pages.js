@@ -158,28 +158,35 @@ $(document).ready(function(){
       }
     });
     
-    $('.apx_banner-grid.grid-format-5 .row').attr('class','owl-carousel')
-    $('.apx_banner-grid.grid-format-5 .owl-carousel').owlCarousel({
-        loop:true,
-        margin:30,
-        items:3,
-        dots:true,
-        nav:false,
-        autoplay:true,
-        autoplayTimeout:4000
-    });
+   
   }else{
-    $('.apx_banner-grid.grid-format-5 .row').attr('class','owl-carousel')
-    $('.apx_banner-grid.grid-format-5 .owl-carousel').owlCarousel({
-        loop:true,
-        margin:0,
-        items:1,
-        dots:true,
-        nav:false,
-        autoplay:true,
-        autoplayTimeout:4000
-    });
+    
   }
+
+  $('.apx_banner-grid.grid-format-5 .row').attr('class','owl-carousel')
+  $('.apx_banner-grid.grid-format-5 .owl-carousel').owlCarousel({
+      loop:true,
+      margin:30,
+      items:3,
+      dots:false,
+      nav:false,
+      autoplay:true,
+      autoplayTimeout:4000,
+      responsive:{
+        0:{
+            items:1,
+            dots:true
+        },
+        600:{
+            items:2,
+            
+        },
+        1000:{
+            items:3,
+            
+        }
+    },
+  });
   
 
   $('body').css('--header-vh-main', ($('header#header').innerHeight()) + 'px');
