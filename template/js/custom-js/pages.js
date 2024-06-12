@@ -104,12 +104,24 @@ $(document).ready(function(){
     $('.page--categories .category-banner, .page--categories .category-description, .page--categories .page-title').wrapAll('<div id=category_heading_box></div>');
     $(`.page--categories .category-description, .page--categories .page-title`).wrapAll('<div></div>');
   }
+
+  $('.apx-banner_slider').addClass('owl-carousel')
+  $('.apx-banner_slider').owlCarousel({
+      loop:true,
+      margin:0,
+      items:1,
+      dots:true,
+      nav:false,
+      autoplay:true,
+      autoplayTimeout:4000
+  });
+  $('.products-carousel__list').each(function(){
+    $(this).find('.product-card__name').equalHeights()
+    $(this).find('.product-card__prices').equalHeights()
+    $(this).find('.product-card').equalHeights()
+  })
   if(window.innerWidth > 990){
-    $('.products-carousel__list').each(function(){
-      $(this).find('.product-card__name').equalHeights()
-      $(this).find('.product-card__prices').equalHeights()
-      $(this).find('.product-card').equalHeights()
-    })
+    
     $('.products-carousel__list').addClass('owl-carousel')
     $('.products-carousel__list').owlCarousel({
       loop:true,
@@ -146,9 +158,27 @@ $(document).ready(function(){
       }
     });
     
-    
+    $('.apx_banner-grid.grid-format-5 .row').attr('class','owl-carousel')
+    $('.apx_banner-grid.grid-format-5 .owl-carousel').owlCarousel({
+        loop:true,
+        margin:30,
+        items:3,
+        dots:true,
+        nav:false,
+        autoplay:true,
+        autoplayTimeout:4000
+    });
   }else{
-    
+    $('.apx_banner-grid.grid-format-5 .row').attr('class','owl-carousel')
+    $('.apx_banner-grid.grid-format-5 .owl-carousel').owlCarousel({
+        loop:true,
+        margin:0,
+        items:1,
+        dots:true,
+        nav:false,
+        autoplay:true,
+        autoplayTimeout:4000
+    });
   }
   
 

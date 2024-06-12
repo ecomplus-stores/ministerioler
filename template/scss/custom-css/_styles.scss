@@ -688,28 +688,35 @@ nav{
         a{text-decoration: underline;}
     }
 
-    #product-gallery{
-        .gallery{
-            flex-direction: column-reverse;
-            .gallery__thumbs{
-                display: flex;
-                flex-basis: unset;
-                flex-wrap: nowrap;
-                gap: 1.875rem;
-                overflow: hidden;
-                margin-top: 1.875rem;
+    // #product-gallery{
+    //     .gallery{
+    //         flex-direction: column-reverse;
+    //         .gallery__thumbs{
+    //             display: flex;
+    //             flex-basis: unset;
+    //             flex-wrap: nowrap;
+    //             gap: 1.875rem;
+    //             overflow: hidden;
+    //             margin-top: 1.875rem;
             
-            }
-            .gallery__stage{
-                background: #fff;
-                border-radius: 1.875rem;
-                padding: 4rem 0;
-                .gallery__big-image{
-                    text-align: center;
-                    .product__picture{margin: 0 auto;}
-                }
-            }
+    //         }
+    //         .gallery__stage{
+    //             background: #fff;
+    //             border-radius: 1.875rem;
+    //             padding: 4rem 0;
+    //             .gallery__big-image{
+    //                 text-align: center;
+    //                 .product__picture{margin: 0 auto;}
+    //             }
+    //         }
+    //     }
+    // }
+    #product-gallery{
+        .gallery__stage,
+        .gallery__item{
+            img{border-radius: .5rem;overflow: hidden;}
         }
+        
     }
     .shipping-calculator{
         border-top: 1px solid var(--color-border);
@@ -1111,7 +1118,7 @@ ul.app_contacts{
             text-transform: capitalize;
         }
     }
-
+    .account,
     .checkout{
         
         .custom-radio input~label:after,
@@ -1662,6 +1669,19 @@ body #cart-quickview{
                 }
             }
         }
+        .minicart__empty{
+            .text-muted{}
+            a{
+                display: flex;
+                justify-content: space-between;
+                border-radius: .313rem;
+                height: 50px;
+                font-weight: 600;
+                font-size: var(--font-size);
+                align-items: center;
+                padding: 1rem;
+            }
+        }
         .card-footer{
             padding: 1.2rem;
             border-top: 1px solid var(--border-color);
@@ -1921,7 +1941,10 @@ border: 3px solid #f2f2f2;
         
         section > a{
             width: 80px;
-            img{width: 80px;height: 100%;object-fit: contain;}
+            img{width: 80px;height: 100%;
+                // object-fit: contain;
+                object-fit: cover;
+            }
         }
         section{
             display: flex;
@@ -2214,6 +2237,7 @@ border: 3px solid #f2f2f2;
     }
     .newsletter {
         text-align: center;
+        
         .footer__social{
             justify-content: center;
         }
@@ -2596,3 +2620,71 @@ body #instant-search .search-engine__no-results{
     }
     h4{display:none}
 }
+
+.apx-banner_slider .item{
+    min-height: unset;
+    min-width: unset;
+    line-height: 0;
+    display: block;
+}
+.apx_banner-grid,
+.apx-banner_slider{
+    .owl-dots{
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        position: relative;
+        margin: .5rem 0 1.5rem 0;
+        .owl-dot{
+            border: 1px solid var(--color1);
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+        }
+        .owl-dot.active{
+            background: var(--color1);
+        }
+    }
+    .owl-carousel{
+        .col-auto{padding: 0;}
+    }
+}
+.banner{min-height: unset;min-width: unset;}
+.product-card{
+    .product-card__content-group{
+        height: 100%;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.login-modal__box{
+    background: #f8f8f8;
+    border-radius: 1rem;
+    overflow: hidden;
+    .login-modal__body,
+    .login-modal__header{
+        background: #f8f8f8;
+        border: 0;
+    }
+    .login-modal__body{
+        button{border-radius: .5rem;
+        font-size: var(--font-size-sm);
+        }
+    }
+}
+
+.share-product{
+    button{
+        i{}
+        span{}
+        font-size: var(--font-size-sm);
+    }
+}
+
+.newsletter{
+    input:focus,
+    input{outline: 0px!important;}
+}
+
