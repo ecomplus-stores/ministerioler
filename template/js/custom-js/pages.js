@@ -22,11 +22,11 @@ $.fn.isInViewport = function () {
 
 //Este código está limitando a busca
 
-window.sessionStorage.setItem('specSearch', JSON.stringify({
-  hasGroup: true,
-  spec: 'grupo',
-  value: '1'
-}))
+// window.sessionStorage.setItem('specSearch', JSON.stringify({
+//  hasGroup: true,
+//  spec: 'grupo',
+//  value: '1'
+// }))
 
 const EcomPassport = require('@ecomplus/passport-client')
 import loadCheckDoc from '../check-group'
