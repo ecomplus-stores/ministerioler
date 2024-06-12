@@ -3,6 +3,28 @@
   "meta_description": "",
   "sections": [
     {
+      "type": "apx_banner-slider",
+      "visibility": "d-block d-md-none",
+      "autoplay": 9000,
+      "spacing": {
+        "container": "container_90"
+      },
+      "slides": [
+        {
+          "desktop": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/1000x600.png"
+          },
+          "mobile": {
+            "mask_opacity": 0,
+            "img": "/img/uploads/1000x600.png"
+          },
+          "start": "2024-06-12T00:49:27.990Z",
+          "end": "2024-06-12T00:49:28.003Z"
+        }
+      ]
+    },
+    {
       "type": "apx_banners-grid",
       "grid": "3",
       "visibility": "d-block d-md-block",
