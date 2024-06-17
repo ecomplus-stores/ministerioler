@@ -11,7 +11,8 @@ import {
     name as getName,
     inStock as checkInStock,
     onPromotion as checkOnPromotion,
-    price as getPrice
+    price as getPrice,
+    specValueByText as getSpecValueByText,
   } from '@ecomplus/utils'
   
   import Vue from 'vue'
@@ -134,7 +135,7 @@ import {
   
       isLogged () {
         const group = window.sessionStorage.getItem('isGroup')
-        return ecomPassport.checkAuthorization() && this.specValueByText(this.body, 'grupo', group)
+        return ecomPassport.checkAuthorization() && this.getSpecValueByText(this.body, 'grupo', group)
       },
   
       discount () {
@@ -154,6 +155,8 @@ import {
         delete this.body.price_change_records
         this.isFavorite = checkFavorite(this.body._id, this.ecomPassport)
       },
+
+      getSpecValueByText,
   
       fetchItem () {
         if (this.productId) {

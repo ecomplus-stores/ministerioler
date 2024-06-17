@@ -211,7 +211,7 @@ import {
 
       isLogged () {
         const group = window.sessionStorage.getItem('isGroup')
-        return ecomPassport.checkAuthorization() && this.specValueByText(this.body, 'grupo', group)
+        return ecomPassport.checkAuthorization() && this.getSpecValueByText(this.body, 'grupo', group)
       },
   
       isVariationInStock () {
