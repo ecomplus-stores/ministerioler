@@ -1,4 +1,5 @@
 <div
+  v-if="!logged || isLogged"
   class="product-card"
   :class="{
     'product-card--inactive': body._id && !isActive,
@@ -93,6 +94,11 @@
             {{ i19outOfStock }}
           </p>
         </slot>
+
+        <small v-else-if="!isLogged" class="text-muted">
+          <a href="/app/#/account/">Login</a>
+          para habilitar compra
+        </small>
 
         <slot
           name="without-price"

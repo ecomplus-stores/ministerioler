@@ -32,7 +32,7 @@
             <slot name="stamps"/>
             <product-gallery
               :product="body"
-              :can-add-to-cart="canAddToCart && body.available && isInStock"
+              :can-add-to-cart="canAddToCart && body.available && isInStock && isLogged"
               :current-slide.sync="currentGalleyImg"
               :is-s-s-r="isSSR"
             >
@@ -109,7 +109,7 @@
           </div>
 
           <template v-else>
-            <slot name="prices">
+            <slot v-if="isLogged" name="prices">
               <p class="product__prices">
                 <a-prices
                   :product="ghostProductForPrices"
@@ -135,7 +135,7 @@
 
             <slot
               name="variations"
-              v-if="hasVariations"
+              v-if="hasVariations && isLogged"
             >
               <product-variations
                 :product="body"
@@ -180,8 +180,24 @@
               </div>
             </slot>
 
+            <template v-if="!isLogged">
+              <span class="text-muted">
+                <a href="/app/#/account/">Acesse sua conta</a>
+                na loja para ver demains inforções e finalizar compras
+              </span>
+              <a
+                role="button"
+                class="btn btn-lg btn-primary mt-3 mb-4"
+                href="/app/#/account/"
+              >
+                <i class="i-user mr-1"></i>
+                Login/Cadastro
+              </a>
+            </template>
+
+
             <div
-              v-if="isKit"
+              v-if="isKit && isLogged"
               class="product__kit"
             >
               <slot
@@ -242,7 +258,7 @@
               </div>
 
               <div
-                v-else-if="hasBuyButton"
+                v-else-if="hasBuyButton && isLogged"
                 class="product__buy"
                 ref="buy"
               >
