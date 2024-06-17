@@ -2692,3 +2692,7 @@ body #instant-search .search-engine__no-results{
 @media(max-width:990px){
     .product-card__name{--max-lines:2}
 }
+
+.search-engine__filter--grupo, .item-retail:has(.not-spec) {
+    display: none !important;
+}

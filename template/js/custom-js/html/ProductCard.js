@@ -135,9 +135,11 @@ import {
   
       isLogged () {
         const group = window.sessionStorage.getItem('isGroup')
-        const hasSpec = this.body.specs && this.body.specs.length && this.body.specs.some(({grid, text}) => grid === 'grupo' && text === group)
-        console.log(this.body.specs)
-        return ecomPassport.checkAuthorization() && hasSpec
+        return !this.body.specs.length || this.body.specs.length && (this.body.specs.every(({grid}) => grid !== 'grupo') || this.body.specs.some(({grid, text}) => grid === 'grupo' && (text === group || !this.logged)))
+      },
+
+      hasGroup () {
+        return this.body.specs && this.body.specs.length && this.body.specs.some(({grid}) => grid === 'grupo')
       },
   
       discount () {

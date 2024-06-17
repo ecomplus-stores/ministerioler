@@ -215,8 +215,13 @@ import {
 
       isLogged () {
         const group = window.sessionStorage.getItem('isGroup')
-        const hasSpec = this.body.specifications && this.body.specifications['grupo'] && this.body.specifications['grupo'].length && this.body.specifications['grupo'][0].text === group
+        const hasSpec = !this.body.specifications || this.body.specifications && (!this.body.specifications['grupo'] || (this.body.specifications['grupo'] && this.body.specifications['grupo'].length && this.body.specifications['grupo'][0].text === group))
         return ecomPassport.checkAuthorization() && hasSpec
+      },
+
+      hasGroup () {
+        const hasSpec = this.body.specifications && this.body.specifications['grupo'] && this.body.specifications['grupo'].length
+        return hasSpec
       },
   
       isVariationInStock () {

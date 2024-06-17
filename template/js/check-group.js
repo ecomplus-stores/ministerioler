@@ -16,20 +16,6 @@ export default (isCheckout = false) => {
             window.checkedGroupDoc = customerDoc
             window.sessionStorage.setItem('isGroup', data.value)
             window.sessionStorage.setItem('specSearch', JSON.stringify(data))
-            window.EcomSearch.dslMiddlewares.push((dsl) => {
-              dsl.query.bool.filter.push({
-                  "term": {
-                    "specs.grid": data.spec
-                  }
-              })
-              dsl.query.bool.filter.push({
-                "terms": {
-                  "specs.text": [
-                    data.value
-                  ]
-                }
-              })
-            })
             window.dispatchEvent(new Event('bazipassCheck'))
           }
         })

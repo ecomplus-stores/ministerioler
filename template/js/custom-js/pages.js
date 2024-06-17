@@ -30,38 +30,7 @@ $.fn.isInViewport = function () {
 
 const EcomPassport = require('@ecomplus/passport-client')
 import loadCheckDoc from '../check-group'
-const specSearch = JSON.parse(window.sessionStorage.getItem('specSearch') || '{}')
-if (specSearch.hasGroup && specSearch.spec && specSearch.value) {
-  window.EcomSearch.dslMiddlewares.push((dsl) => {
-    dsl.query.bool.filter.push({
-        "nested": {
-          "path": "specs",
-          "query": {
-            "bool": {
-              "filter": [
-                {
-                  "term": {
-                    "specs.grid": specSearch.spec
-                  }
-                },
-                {
-                  "terms": {
-                    "specs.text": [
-                      specSearch.value
-                    ]
-                  }
-                }
-              ]
-            }
-          }
-        }
-    })
-
-    console.log(dsl.query.bool.filter)
-  })
-} else {
-  loadCheckDoc()
-}
+loadCheckDoc()
 
 const search = new EcomSearch()
 

@@ -3,7 +3,8 @@
   class="product-card"
   :class="{
     'product-card--inactive': body._id && !isActive,
-    'product-card--small': isSmall
+    'product-card--small': isSmall,
+    'not-spec': (logged && !isLogged) || (!logged && hasGroup)
   }"
   @mouseover="isHovered = true"
   :data-product-id="body._id"
@@ -94,11 +95,6 @@
             {{ i19outOfStock }}
           </p>
         </slot>
-
-        <small v-else-if="!isLogged" class="text-muted">
-          <a href="/app/#/account/">Login</a>
-          para habilitar compra
-        </small>
 
         <slot
           name="without-price"
@@ -193,7 +189,7 @@
 </div>
 <div
   v-else
-  class="product-card"
+  class="product-card not-spec"
   :class="{
     'product-card--inactive': body._id && !isActive,
     'product-card--small': isSmall
@@ -204,7 +200,7 @@
 >
   <transition :enter-active-class="transitionClass">
     <section>
-      Produto Indisponível para seu grupo
+      Produto Indisponível
     </section>
   </transition>
 </div>
