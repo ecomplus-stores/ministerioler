@@ -180,19 +180,16 @@
               </div>
             </slot>
 
-            <template v-if="!isLogged">
-              <span class="text-muted">
+            <template v-if="!logged || !isLogged">
+              <span v-if="!logged" class="text-muted">
                 <a href="/app/#/account/">Acesse sua conta</a>
-                na loja para ver demains inforções e finalizar compras
+                na loja para ver demais informações e finalizar compras
               </span>
-              <a
-                role="button"
-                class="btn btn-lg btn-primary mt-3 mb-4"
-                href="/app/#/account/"
-              >
-                <i class="i-user mr-1"></i>
-                Login/Cadastro
-              </a>
+
+              <span v-if="logged && !isLogged" class="text-muted">
+                Você não tem permissão pra comprar esse produto
+              </span>
+              
             </template>
 
 

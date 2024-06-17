@@ -191,3 +191,20 @@
 
   <div ref="quickview"></div>
 </div>
+<div
+  v-else
+  class="product-card"
+  :class="{
+    'product-card--inactive': body._id && !isActive,
+    'product-card--small': isSmall
+  }"
+  @mouseover="isHovered = true"
+  :data-product-id="body._id"
+  :data-sku="body.sku"
+>
+  <transition :enter-active-class="transitionClass">
+    <section>
+      Produto Indisponível para seu grupo
+    </section>
+  </transition>
+</div>

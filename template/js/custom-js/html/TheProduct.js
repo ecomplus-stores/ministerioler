@@ -209,9 +209,14 @@ import {
         return !getPrice(this.body)
       },
 
+      logged () {
+        return ecomPassport.checkAuthorization()
+      }, 
+
       isLogged () {
         const group = window.sessionStorage.getItem('isGroup')
-        return ecomPassport.checkAuthorization() && this.getSpecValueByText(this.body, 'grupo', group)
+        const hasSpec = this.body.specifications && this.body.specifications['grupo'] && this.body.specifications['grupo'].length && this.body.specifications['grupo'][0].text === group
+        return ecomPassport.checkAuthorization() && hasSpec
       },
   
       isVariationInStock () {

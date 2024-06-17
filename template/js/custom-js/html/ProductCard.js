@@ -135,7 +135,9 @@ import {
   
       isLogged () {
         const group = window.sessionStorage.getItem('isGroup')
-        return ecomPassport.checkAuthorization() && this.getSpecValueByText(this.body, 'grupo', group)
+        const hasSpec = this.body.specs && this.body.specs.length && this.body.specs.some(({grid, text}) => grid === 'grupo' && text === group)
+        console.log(this.body.specs)
+        return ecomPassport.checkAuthorization() && hasSpec
       },
   
       discount () {
