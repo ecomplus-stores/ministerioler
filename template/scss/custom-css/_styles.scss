@@ -2696,3 +2696,21 @@ body #instant-search .search-engine__no-results{
 .search-engine__filter--grupo, .item-retail:has(.not-spec) {
     display: none !important;
 }
+
+.search-engine + #search-engine-snap{display: none;}
+
+#content .search-engine__results .container{padding: 0;}
+
+.owl-item:not(.active) .ul__slide{display: none;}
+
+.owl-item .product-card__link > span{
+    height: var(--product-card__name-height);
+}
+
+.owl-item .product-card{
+    height: var(--product-card-height);
+}
+
+.owl-item .product-card__prices{
+    height: var(--product-card__prices-height);
+}

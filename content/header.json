@@ -1,11 +1,11 @@
 {
   "categories_list": {
     "featured": [
-      "/livros?Livros",
+      "/search?Todos os Livros",
       "/autores?Autores",
       "/promocoes?Promoções"
     ],
-    "random": 3,
+    "random": 0,
     "full_width": false
   },
   "menu_all_departments": false,

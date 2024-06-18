@@ -9,6 +9,40 @@
  * @version 1.5.1
  */
 !function(a){a.fn.equalHeights=function(){var b=0,c=a(this);return c.each(function(){var c=a(this).innerHeight();c>b&&(b=c)}),c.css("height",b)},a("[data-equal]").each(function(){var b=a(this),c=b.data("equal");b.find(c).equalHeights()})}(jQuery);
+!function(a){
+  a.fn.equalHeightsWithValue = function(){
+      var maxHeight = 0, 
+          elements = a(this);
+      
+      elements.each(function(){
+          var currentHeight = a(this).innerHeight();
+          if (currentHeight > maxHeight) {
+              maxHeight = currentHeight;
+          }
+      });
+
+      // Retorna a altura máxima encontrada
+      return maxHeight; 
+  };
+
+  a("[data-equal]").each(function(){
+      var container = a(this), 
+          selector = container.data("equal");
+      
+      // Aplica a função equalHeightsWithValue e captura a altura máxima
+      var maxHeight = container.find(selector).equalHeightsWithValue();
+
+      // Obtém o nome do seletor (remoção de possíveis caracteres especiais para um nome de variável CSS válido)
+      var varName = selector.replace(/[^a-zA-Z0-9_-]/g, '');
+
+      // Adiciona a variável CSS no body
+      document.body.style.setProperty('--' + varName + '-height', maxHeight + 'px');
+      
+      // Você pode usar o valor maxHeight conforme necessário
+      console.log("Altura máxima igualada: " + maxHeight + " pixels");
+  });
+}(jQuery);
+
 $.fn.isInViewport = function () {
   let elementTop = $(this).offset().top;
   let elementBottom = elementTop + $(this).outerHeight();
@@ -84,11 +118,7 @@ $(document).ready(function(){
       autoplay:true,
       autoplayTimeout:4000
   });
-  $('.products-carousel__list').each(function(){
-    $(this).find('.product-card__name').equalHeights()
-    $(this).find('.product-card__prices').equalHeights()
-    $(this).find('.product-card').equalHeights()
-  })
+  
   if(window.innerWidth > 990){
     
     $('.products-carousel__list').addClass('owl-carousel')
@@ -251,4 +281,26 @@ if ($timers.length) {
       updateTimerCount_()
     }
   })
+}
+
+window.equalHeightsList = function(){
+  setTimeout(() => {
+    if($(`#page-home`).length > 0){
+      $('.products-carousel__list .owl-item.active').each(function(){
+        document.body.style.setProperty('--product-card__name-height', $(this).find('.product-card__name').closest(`a`).equalHeightsWithValue() + 'px');
+        document.body.style.setProperty('--product-card__prices-height', $(this).find('.product-card__prices').equalHeightsWithValue() + 'px');
+        document.body.style.setProperty('--product-card-height', $(this).find('.product-card').equalHeightsWithValue() + 'px');
+        
+      });
+    }else{
+      $('#content .product-card__name').closest(`span`).attr(`style`,``);
+      $('#content .product-card__name').closest(`span`).equalHeights()
+      //$('#content .product-card__prices').attr(`style`,``);
+      //$('#content .product-card__prices').equalHeights()
+      $('#content .product-card').attr(`style`,``);
+      $('#content .product-card').equalHeights()
+    }
+    
+  },500)
+  
 }

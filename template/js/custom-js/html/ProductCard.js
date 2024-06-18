@@ -239,6 +239,7 @@ import {
       if (!this.isLoaded) {
         this.fetchItem()
       }
+      window.equalHeightsList()
     }
   }
   
