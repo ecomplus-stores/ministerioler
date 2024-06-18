@@ -197,7 +197,7 @@
       "collection_id": "",
       "sort": "sales",
       "title": "Mais Vendidos",
-      "link": "/mais-vendidos"
+      "link": "/search?sort=sales"
     },
     {
       "type": "apx_list-images",
