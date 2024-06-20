@@ -187,7 +187,13 @@
       ],
       "grid": "5",
       "breakline": "false",
-      "container": "container"
+      "container": "container",
+      "spacing": {
+        "desktop": {
+          "margin_bottom": "2",
+          "margin_top": "5"
+        }
+      }
     },
     {
       "type": "collection-shelf",
