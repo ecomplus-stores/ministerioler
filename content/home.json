@@ -207,8 +207,8 @@
       "spacing": {
         "container": "container",
         "desktop": {
-          "margin_top": "4",
-          "margin_bottom": "4",
+          "margin_top": "2",
+          "margin_bottom": "5",
           "padding_top": "3",
           "padding_bottom": "3"
         },
