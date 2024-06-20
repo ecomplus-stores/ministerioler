@@ -1,5 +1,5 @@
 {
-  "domain": "https://manuaisclassicalconversations.netlify.app",
+  "domain": "ministerioler.netlify.app",
   "currency_symbol": "R$",
   "primary_color": "#084f53",
   "theme": {
@@ -8,19 +8,19 @@
   },
   "bg_color": "#ffffff",
   "repository": "ecomplus-stores/ministerioler",
-  "logo": "/img/uploads/logoll1.png",
-  "name": "LojaLer",
-  "short_name": "Loja Ler",
+  "logo": "/img/uploads/jobflow.png",
+  "name": "Loja LER",
+  "short_name": "Loja LER",
   "lang": "pt_br",
   "currency": "BRL",
   "mini_logo": "",
   "font_family": "_",
-  "favicon": "/img/uploads/icon.png",
+  "favicon": "/img/uploads/fav.png",
   "icons_font": "_",
   "country_code": "BR",
   "secondary_color": "#4f4f4f",
-  "icon": "/img/uploads/icon.png",
+  "icon": "/img/uploads/fav.png",
   "store_id": 51504,
   "description": "ministerioler",
-  "large_icon": "/img/uploads/icon.png"
+  "large_icon": "/img/uploads/fav.png"
 }
