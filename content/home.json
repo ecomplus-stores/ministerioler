@@ -221,44 +221,44 @@
       },
       "banners": [
         {
-          "img": "/img/uploads/rectangle-3.png",
-          "title": "Clarice Lispector",
-          "link": "/clarice-lispector"
+          "img": "/img/uploads/daniel-berger.jpg",
+          "title": "Daniel Berger",
+          "link": "/daniel-r-berger-ii"
         },
         {
-          "img": "/img/uploads/rectangle-3.png",
-          "title": "Clarice Lispector",
-          "link": "/clarice-lispector"
+          "img": "/img/uploads/jay-adams.jpg",
+          "title": "Jay Adams",
+          "link": "/jay-e-adams"
         },
         {
-          "img": "/img/uploads/rectangle-3.png",
-          "title": "Clarice Lispector",
-          "link": "/clarice-lispector"
+          "img": "/img/uploads/susan-bauer.jpg",
+          "title": "Susan Bauer",
+          "link": "/susan-wise-bauer"
         },
         {
-          "img": "/img/uploads/rectangle-3.png",
-          "title": "Clarice Lispector",
-          "link": "/clarice-lispector"
+          "img": "/img/uploads/lou-priolo.jpg",
+          "title": "Lou Priolo",
+          "link": "/lou-priolo"
         },
         {
-          "img": "/img/uploads/rectangle-3.png",
-          "title": "Clarice Lispector",
-          "link": "/clarice-lispector"
+          "img": "/img/uploads/inez-borges.jpg",
+          "title": "Inez Borges",
+          "link": "/inez-augusto-borges"
         },
         {
-          "img": "/img/uploads/rectangle-3.png",
-          "title": "Clarice Lispector",
-          "link": "/clarice-lispector"
+          "img": "/img/uploads/sturart-scott.jpg",
+          "title": "Stuart Scott",
+          "link": "/stuart-scott"
         },
         {
-          "img": "/img/uploads/rectangle-3.png",
-          "title": "Clarice Lispector",
-          "link": "/clarice-lispector"
+          "img": "/img/uploads/john-piper.jpg",
+          "title": "John Piper",
+          "link": "/john-piper"
         },
         {
-          "img": "/img/uploads/rectangle-3.png",
-          "title": "Clarice Lispector",
-          "link": "/clarice-lispector"
+          "img": "/img/uploads/john-macarthur.jpg",
+          "title": "John MacArthur",
+          "link": "/john-macarthur"
         }
       ]
     },
