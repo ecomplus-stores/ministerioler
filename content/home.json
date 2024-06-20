@@ -267,21 +267,21 @@
       "desktop": {
         "description_color": "#ffffff",
         "animate": "fadeInUp",
-        "img": "/img/uploads/group-24.png",
+        "img": "/img/uploads/design-sem-nome.jpg",
         "content_order": "left_image",
-        "btn_url": "/biblias",
+        "btn_url": "https://wa.me/5512991913123?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20compra%20para%20igrejas.",
         "mask_color": "#084f53",
-        "btn_text": "Ver Catálogo",
+        "btn_text": "Fale Conosco",
         "btn_text_color": "#ffffff",
         "mask_opacity": 0,
-        "title": "Fortaleça seu relacionamento com Deus",
+        "title": "Venda para Igrejas em Atacado",
         "title_color": "#ffffff",
-        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. "
+        "description": "Se você quer comprar livros para sua igreja local para estudos bíblicos ou montar uma livraria, fale com o setor de grandes compras."
       },
       "mobile": {
         "description_color": "#ffffff",
         "animate": "fadeInUp",
-        "img": "/img/uploads/group-24.png",
+        "img": "/img/uploads/design-sem-nome.jpg",
         "content_order": "left_image",
         "btn_url": "/biblias",
         "mask_color": "#084f53",
