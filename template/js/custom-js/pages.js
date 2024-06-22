@@ -301,6 +301,6 @@ window.equalHeightsList = function(){
       $('#content .product-card').equalHeights()
     }
     
-  },500)
+  },1500)
   
 }

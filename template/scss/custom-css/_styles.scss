@@ -2705,6 +2705,7 @@ body #instant-search .search-engine__no-results{
 
 .owl-item .product-card__link > span{
     height: var(--product-card__name-height);
+    display: block;
 }
 
 .owl-item .product-card{
