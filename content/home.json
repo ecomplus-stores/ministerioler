@@ -98,7 +98,8 @@
       "banners": [
         {
           "img": "/img/uploads/bn1.jpg",
-          "title": "Até R$ 20,00"
+          "title": "Até R$ 20,00",
+          "link": "/ate20"
         },
         {
           "img": "/img/uploads/bn2.jpg",
