@@ -447,6 +447,7 @@ export default {
           ecomSearch.setBrandNames(setOptions)
           break
         case 'Categories':
+          
           ecomSearch.setCategoryNames(setOptions)
           if (this.isFixedCategories && this.categories) {
             ecomSearch.mergeFilter({
@@ -589,5 +590,6 @@ export default {
     resetEcomSearch(this)
     this.handlePresetedOptions()
     this.fetchItems()
+    console.log(`categories.name`,this.categories)
   }
 }

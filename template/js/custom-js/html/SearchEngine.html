@@ -148,7 +148,7 @@
 
         <footer class="card-footer">
           <button
-            class="btn btn-sm btn-block btn-outline-secondary"
+            class="btn btn-sm btn-block btn-outline-secondary d-none"
             type="button"
             @click="clearFilters"
           >
@@ -338,16 +338,18 @@
               </button>
 
               <template v-for="(options, filter) in selectedOptions">
-                <button
-                  class="search-engine__selected btn btn-sm btn-light"
-                  type="button"
-                  v-for="option in options"
-                  @click="setFilterOption(filter, option, false)"
-                >
-                  <i class="i-times mr-1"></i>
-                  {{ option }}
-                  <small>{{ getFilterLabel(filter) }}</small>
-                </button>
+                <div v-if="filter != 'Categories'">
+                  <button
+                    class="search-engine__selected btn btn-sm btn-light"
+                    type="button"
+                    v-for="option in options"
+                    @click="setFilterOption(filter, option, false)"
+                  >
+                    <i class="i-times mr-1"></i>
+                    {{ option }}
+                    <small>{{ getFilterLabel(filter) }}</small>
+                  </button>
+                </div>
               </template>
             </div>
           </transition>
