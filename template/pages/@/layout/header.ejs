@@ -4,6 +4,7 @@ const header = _.cms('header') || {}
 const contacts = _.cms('contacts') || {}
 const themeCustom = _.settings.theme.custom || ''
 
+
 // social networks handled by contacts
 const networks = [
   'facebook',
@@ -45,6 +46,7 @@ if (header.categories_list) {
   }
   isCategoriesNavFull = header.categories_list.full_width
 }
+
 const hasMegamenu = header.desktop_megamenu
 const isAlphabeticalOrderSubmenu = header.alphabetical_order_submenu
 const fullWidthSubmenu = header.full_width_submenu

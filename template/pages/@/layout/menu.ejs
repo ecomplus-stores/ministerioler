@@ -1,4 +1,8 @@
 <%
+
+
+
+
 // load menu options and contacts from content
 const menu = _.cms('menu') || {}
 const contacts = _.cms('contacts') || {}
@@ -15,9 +19,10 @@ const networksWithColors = [
 const allCategories = menu.alphabetical_order
   ? _.lodash.sortBy(_.categories, ['name'])
   : _.categories
-const categoryParents = _.lodash.groupBy(allCategories, ({ parent }) => {
+const categoryParents = await _.lodash.groupBy(allCategories, ({ parent }) => {
   return !parent || !parent.slug ? '_' : parent.slug
 })
+
 const getSubmenuId = slug => `a-${slug.replace(/\//g, '_')}`
 
 const mainCategories = categoryParents._
@@ -35,6 +40,38 @@ if (mainCategories) {
     }
   }
 }
+mainCategories.push({
+  _id:'x',
+  name:'Editoras',
+  slug:'editoras'
+})
+
+let brands
+const params = {
+  sort:'name',
+  limit:999
+};
+
+
+const { data } = await _.ecomClient.store({
+  url: '/brands',
+  axiosConfig: {
+    params
+  }
+})
+brands = data.result.map(item => ({
+  ...item,
+  parent: {
+    _id: 'x',
+    name: 'Editoras',
+    slug: 'editoras'
+  }
+}));
+//console.log(categoryParents)
+
+//const categoryParents = { ...categoryParents__, ...brands };
+
+//const bundleCategoriesBrands = [..._.categories, ...brands]
 %>
 
 <aside id="menu" class="menu shadow">
@@ -59,6 +96,7 @@ if (mainCategories) {
     
 
     <% for (const slug in categoryParents) { %>
+      
       <% if (categoryParents.hasOwnProperty(slug)) { %>
         <% let category, parent %>
         <div
@@ -75,7 +113,7 @@ if (mainCategories) {
         >
 
           <% if (slug !== '_') { %>
-            <% category = _.categories.find(category => category.slug === slug) %>
+            <% category = [..._.categories, ...brands].find(category => category.slug === slug) %>
             <% parent = category && category.parent %>
             <div class="card-header">
               <div class="row apx-side-heading">

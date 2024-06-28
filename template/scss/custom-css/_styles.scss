@@ -2715,3 +2715,41 @@ body #instant-search .search-engine__no-results{
 .owl-item .product-card__prices{
     height: var(--product-card__prices-height);
 }
+
+body .search-engine__aside{
+    background: #f8f8f8;
+    width: 380px;
+    max-width: 100%;
+    .card-header{
+        font-size: var(--h5);
+        font-weight: 700;
+        background: #f8f8f8;
+        border: 0;
+        button{opacity: 1;}
+    }
+    .card-body{
+        padding: 0 1.5rem 1.5rem 1.5rem;
+        background: #f8f8f8;
+        .search-engine__filter{
+            button.text-truncate{
+                color: var(--blk);
+                font-size: var(--font-size);
+                font-weight: 500;
+                text-transform: capitalize;
+                i{
+                    font-size: calc(var(--font-size) * .8);
+                    color: var(--color1);
+                }
+            }
+            .search-engine__option{
+                margin-bottom: .5rem;
+                label{
+                    color: var(--blk);
+                    font-size: var(--font-size-sm);
+                    line-height: calc(var(--font-size)* 1.4);
+                }
+            }
+        }
+    }
+    .card-footer{}
+}

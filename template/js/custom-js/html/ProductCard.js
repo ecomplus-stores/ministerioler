@@ -239,7 +239,10 @@ import {
       if (!this.isLoaded) {
         this.fetchItem()
       }
-      window.equalHeightsList()
+      setTimeout(()=> {
+        window.equalHeightsList()
+      },1000)
+      
     }
   }
   

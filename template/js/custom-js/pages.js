@@ -67,6 +67,8 @@ import loadCheckDoc from '../check-group'
 loadCheckDoc()
 
 const search = new EcomSearch()
+//window.brands = search.getBrands()
+
 
 let mouseDown = false;
 let startX, scrollLeft;
@@ -103,8 +105,10 @@ window.whatsappRedirect = function(type){
   }
 }
 
-$(document).ready(function(){
 
+
+$(document).ready(function(){
+  //headerBrands();
   if($('.page--categories .category-banner').length > 0 && $(`.page--categories .category-description`).length > 0){
     $('.page--categories .category-banner, .page--categories .category-description, .page--categories .page-title').wrapAll('<div id=category_heading_box></div>');
     $(`.page--categories .category-description, .page--categories .page-title`).wrapAll('<div></div>');
