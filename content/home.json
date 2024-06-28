@@ -25,11 +25,13 @@
         {
           "desktop": {
             "mask_opacity": 0,
-            "img": "/img/uploads/parcele-suas-compras-em-ate-12x-sem-juros-1000-x-600-px-420-x-400-px-1000-x-600-px-.jpg"
+            "img": "/img/uploads/parcele-suas-compras-em-ate-12x-sem-juros-1000-x-600-px-420-x-400-px-1000-x-600-px-.jpg",
+            "link": "https://lojaler.com.br/ouca-filho-meu"
           },
           "mobile": {
             "mask_opacity": 0,
-            "img": "/img/uploads/parcele-suas-compras-em-ate-12x-sem-juros-1000-x-600-px-420-x-400-px-1000-x-600-px-.jpg"
+            "img": "/img/uploads/parcele-suas-compras-em-ate-12x-sem-juros-1000-x-600-px-420-x-400-px-1000-x-600-px-.jpg",
+            "link": "https://lojaler.com.br/ouca-filho-meu"
           },
           "start": "2024-06-12T00:49:27.990Z",
           "end": "2024-06-12T00:49:28.003Z"
@@ -37,11 +39,13 @@
         {
           "desktop": {
             "mask_opacity": 0,
-            "img": "/img/uploads/parcele-suas-compras-em-ate-12x-sem-juros-3-.jpg"
+            "img": "/img/uploads/parcele-suas-compras-em-ate-12x-sem-juros-3-.jpg",
+            "link": "https://wa.me/5512991913123?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20compra%20em%20grande%20quantidade."
           },
           "mobile": {
             "mask_opacity": 0,
-            "img": "/img/uploads/parcele-suas-compras-em-ate-12x-sem-juros-3-.jpg"
+            "img": "/img/uploads/parcele-suas-compras-em-ate-12x-sem-juros-3-.jpg",
+            "link": "https://wa.me/5512991913123?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20compra%20em%20grande%20quantidade."
           },
           "start": "2024-06-12T00:49:27.990Z",
           "end": "2024-06-12T00:49:28.003Z"
@@ -129,7 +133,8 @@
           "img": "/img/uploads/design-sem-nome-8-.jpg",
           "title": "Atacado"
         }
-      ]
+      ],
+      "link": "/promocoes"
     },
     {
       "autoplay": 1000,
