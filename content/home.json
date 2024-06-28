@@ -148,41 +148,49 @@
         {
           "desktop": {
             "mask_opacity": 0,
-            "img": "/img/uploads/saiba-mais-1-.jpg"
+            "img": "/img/uploads/saiba-mais-1-.jpg",
+            "link": "https://lojaler.com.br/apostila-sons-do-mundo"
           },
           "mobile": {
             "mask_opacity": 0,
-            "img": "/img/uploads/saiba-mais-1-.jpg"
+            "img": "/img/uploads/saiba-mais-1-.jpg",
+            "link": "https://lojaler.com.br/apostila-sons-do-mundo"
           }
         },
         {
           "desktop": {
             "mask_opacity": 0,
-            "img": "/img/uploads/saiba-mais.jpg"
+            "img": "/img/uploads/saiba-mais.jpg",
+            "link": "https://lojaler.com.br/o-marido-exemplar"
           },
           "mobile": {
             "mask_opacity": 0,
-            "img": "/img/uploads/saiba-mais.jpg"
+            "img": "/img/uploads/saiba-mais.jpg",
+            "link": "https://lojaler.com.br/o-marido-exemplar"
           }
         },
         {
           "desktop": {
             "mask_opacity": 0,
-            "img": "/img/uploads/saiba-mais-3-.jpg"
+            "img": "/img/uploads/saiba-mais-3-.jpg",
+            "link": "https://lojaler.com.br/teologia-geek"
           },
           "mobile": {
             "mask_opacity": 0,
-            "img": "/img/uploads/saiba-mais-3-.jpg"
+            "img": "/img/uploads/saiba-mais-3-.jpg",
+            "link": "https://lojaler.com.br/teologia-geek"
           }
         },
         {
           "desktop": {
             "mask_opacity": 0,
-            "img": "/img/uploads/saiba-mais-2-.jpg"
+            "img": "/img/uploads/saiba-mais-2-.jpg",
+            "link": "https://lojaler.com.br/ouca-filho-meu"
           },
           "mobile": {
             "mask_opacity": 0,
-            "img": "/img/uploads/saiba-mais-2-.jpg"
+            "img": "/img/uploads/saiba-mais-2-.jpg",
+            "link": "https://lojaler.com.br/ouca-filho-meu"
           }
         }
       ],
