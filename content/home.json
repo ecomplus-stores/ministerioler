@@ -107,7 +107,8 @@
         },
         {
           "img": "/img/uploads/bn2.jpg",
-          "title": "Mais vendidos"
+          "title": "Mais vendidos",
+          "link": "/search?sort=sales"
         },
         {
           "img": "/img/uploads/bn3.jpg",
