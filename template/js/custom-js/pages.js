@@ -98,7 +98,9 @@ function move(e) {
 }
 
 window.whatsappRedirect = function(type){
-  alert(type)
+  if(type == "consultor"){
+    window.open(`https://wa.me/5512991913123?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20compra%20em%20grande%20quantidade.`,`_blank`);
+  }
 }
 
 $(document).ready(function(){
