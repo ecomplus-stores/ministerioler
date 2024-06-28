@@ -116,23 +116,28 @@
         },
         {
           "img": "/img/uploads/bn4.jpg",
-          "title": "Educação cristã"
+          "title": "Educação cristã",
+          "link": "/educacao-crista"
         },
         {
           "img": "/img/uploads/design-sem-nome-7-.jpg",
-          "title": "Liderança"
+          "title": "Liderança",
+          "link": "/lideranca"
         },
         {
           "img": "/img/uploads/nn5.jpg",
-          "title": "Bíblias"
+          "title": "Bíblias",
+          "link": "/biblias"
         },
         {
           "img": "/img/uploads/bn6.jpg",
-          "title": "Família"
+          "title": "Família",
+          "link": "/familia"
         },
         {
           "img": "/img/uploads/design-sem-nome-8-.jpg",
-          "title": "Atacado"
+          "title": "Atacado",
+          "link": "https://wa.me/5512991913123?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20compra%20em%20grande%20quantidade"
         }
       ],
       "link": "/promocoes"
