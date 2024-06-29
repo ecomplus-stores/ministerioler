@@ -563,7 +563,7 @@ export default {
     if(sortValue){
       this.setSortOrder(sortValue)
     }
-    if(window.location.pathname == ('/search')){
+    if(window.location.pathname == ('/search') && !sortValue){
       this.setSortOrder(`sales`)
     }
     setTimeout(()=>{
@@ -577,8 +577,9 @@ export default {
               for (const item of filters[chave]) {
                   //console.log("Text:", item.text);
                   setTimeout(() => {
+                    //console.log('apply order',chave,item.text)
                     this.setFilterOption(chave,item.text,true);
-                  }, 100)
+                  }, 200)
       
               }
           }

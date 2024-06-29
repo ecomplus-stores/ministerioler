@@ -63,6 +63,7 @@ $.fn.isInViewport = function () {
 // }))
 
 const EcomPassport = require('@ecomplus/passport-client')
+const client = EcomPassport.ecomPassport.getCustomer();   
 import loadCheckDoc from '../check-group'
 loadCheckDoc()
 
@@ -217,12 +218,17 @@ $('body').on('click','.product-card__favorite-remove', function(){
   toggleFavoriteFront(this);
 });
 
-$('body').on('click','.product-card__favorite', function(){
-  placeFavoritesAside();
+$('body').on('click','.product-card__favorite', function(){  
+  if(!client.display_name){
+    window.location.href = "/app/#/account/"
+    return false
+  }else{
+    placeFavoritesAside();
+  }  
 })
 
 
-async function placeFavoritesAside(){
+async function placeFavoritesAside(){  
   $(`.favorites__body`).empty();
   try {
     const { favorites } = await EcomPassport.ecomPassport.getCustomer();    

@@ -3,7 +3,8 @@
     "featured": [
       "/search?Todos os Livros",
       "/autores?Autores",
-      "/promocoes?Promoções"
+      "/promocoes?Promoções",
+      "/editoras?Editoras"
     ],
     "random": 0,
     "full_width": false
