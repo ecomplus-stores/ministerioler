@@ -296,23 +296,21 @@ if ($timers.length) {
 }
 
 window.equalHeightsList = function(){
-  setTimeout(() => {
-    if($(`#page-home`).length > 0){
-      $('.products-carousel__list .owl-item.active').each(function(){
-        document.body.style.setProperty('--product-card__name-height', $(this).find('.product-card__name').closest(`a`).equalHeightsWithValue() + 'px');
-        document.body.style.setProperty('--product-card__prices-height', $(this).find('.product-card__prices').equalHeightsWithValue() + 'px');
-        document.body.style.setProperty('--product-card-height', $(this).find('.product-card').equalHeightsWithValue() + 'px');
+  // setTimeout(() => {
+  //   if($(`#page-home`).length > 0){
+  //     $('.products-carousel__list .owl-item.active').each(function(){
+  //       document.body.style.setProperty('--product-card__name-height', $(this).find('.product-card__name').closest(`a`).equalHeightsWithValue() + 'px');
+  //       document.body.style.setProperty('--product-card__prices-height', $(this).find('.product-card__prices').equalHeightsWithValue() + 'px');
+  //       document.body.style.setProperty('--product-card-height', $(this).find('.product-card').equalHeightsWithValue() + 'px');
         
-      });
-    }else{
-      $('#content .product-card__name').closest(`span`).attr(`style`,``);
-      $('#content .product-card__name').closest(`span`).equalHeights()
-      //$('#content .product-card__prices').attr(`style`,``);
-      //$('#content .product-card__prices').equalHeights()
-      $('#content .product-card').attr(`style`,``);
-      $('#content .product-card').equalHeights()
-    }
+  //     });
+  //   }else{
+  //     $('#content .product-card__name').closest(`span`).attr(`style`,``);
+  //     $('#content .product-card__name').closest(`span`).equalHeights()
+  //     $('#content .product-card').attr(`style`,``);
+  //     $('#content .product-card').equalHeights()
+  //   }
     
-  },1500)
+  // },1500)
   
 }

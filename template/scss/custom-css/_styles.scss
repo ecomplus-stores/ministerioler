@@ -197,6 +197,9 @@ main .top-bar a.top-bar__countdown{
                 background-position: center center;
                 margin: 0;
             }
+            i.active{
+                background-image:url('../../public/assets/heart_active.svg')
+            }
         }
         background: var(--wht);
         padding: 1rem;
@@ -235,22 +238,29 @@ main .top-bar a.top-bar__countdown{
             }
         }
         .product-card__prices > span:last-child{
-            flex: 1 1 100%;
+            // flex: 1 1 100%;
             font-size: var(--smallest);
             text-align: center;
             line-height: initial;
             span{font-weight: 600;}
         }
+        // .product-card__prices{
+        //     display: flex;
+        //     flex-wrap: wrap;
+        //     flex-direction: row;
+        //     align-items: center;
+        //     justify-content: center;
+        //     gap: .3rem 1rem;
+        //     margin: 1rem 0;
+        //     *:empty{display: none;}
+        //     *{line-height: var(--h6);}
+        // }
         .product-card__prices{
             display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            align-items: center;
             justify-content: center;
-            gap: .3rem 1rem;
+            text-align: center;
             margin: 1rem 0;
             *:empty{display: none;}
-            *{line-height: var(--h6);}
         }
         .prices:not(.prices--literal) .prices__compare{
             font-size: var(--font-size-sm);
@@ -2465,14 +2475,15 @@ border: 3px solid #f2f2f2;
             padding-bottom: 1.5rem;
             margin-top: 0 !important;
         }
-        #storefront-app .checkout .login{
+        #storefront-app  .login{
             width: 100%;
             flex-direction: column;
             gap: 2rem;
         }
-        #storefront-app .checkout .login form .login__email,
-        #storefront-app .checkout .login form{width: 100%;}
-        .checkout{padding: 0 1rem;}
+        #storefront-app  .login form .login__email,
+        #storefront-app  .login form{width: 100%;}
+        .checkout,
+        .account{padding: 0 1rem;}
         #storefront-app .checkout .checkout__account{width: 100%;}
         #storefront-app .checkout .address-form .lead, #storefront-app .checkout .checkout__account .lead{margin-top: -1rem;}
         #storefront-app .checkout__app{width: 100%;margin-top:-1rem;margin-right: 0;}
@@ -2754,4 +2765,27 @@ body .search-engine__aside{
         }
     }
     .card-footer{}
+}
+
+.ul__slides{
+    .owl-stage{
+        display: flex;
+        .owl-item.active{
+            .ul__slide {
+                display: flex;
+                flex: 1 0 auto;
+                height: 100%;
+                .product-item,
+                .product-card{height: 100%;}
+            }
+        }
+    }
+}
+
+#content{
+   .search-engine__retail  {
+        .product-item,
+        .product-card{height: 100%;}
+            
+    }
 }
