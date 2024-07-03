@@ -2186,6 +2186,7 @@ border: 3px solid #f2f2f2;
         padding-left: 20px!important;
         padding-right: 20px!important;
     }
+    .ul__slides.products-carousel__list{height: 400px;}
     .breadcrumb{
         margin-left: -20px;
         margin-right: -20px;
@@ -2781,7 +2782,13 @@ body .search-engine__aside{
         }
     }
 }
-
+.ul__slide {
+    display: flex;
+    flex: 1 0 auto;
+    height: 100%;
+    .product-item,
+    .product-card{height: 100%;}
+}
 #content{
    .search-engine__retail  {
         .product-item,

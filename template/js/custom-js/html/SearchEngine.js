@@ -128,7 +128,8 @@ export default {
       popularItems: [],
       hasSetPopularItems: false,
       isAsideVisible: false,
-      searchFilterId: 0
+      searchFilterId: 0,
+      authorPage:false,
     }
   },
 
@@ -300,6 +301,7 @@ export default {
       })
       this.filters = this.filters.filter((_, i) => updatedFilters.includes(i))
       console.log(`this.filters `,this.filters )
+
       let specialItem = "gender";
       this.filters.sort((a, b) => {
         if (a.filter === specialItem) return -1;
@@ -591,6 +593,9 @@ export default {
     resetEcomSearch(this)
     this.handlePresetedOptions()
     this.fetchItems()
-    console.log(`categories.name`,this.categories)
+    //console.log(`categories.name`,this.categories)
+    if(this.categories.slice(0,1)){
+      this.authorPage = true
+    }
   }
 }
