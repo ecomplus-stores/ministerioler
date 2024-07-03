@@ -53,19 +53,10 @@ $.fn.isInViewport = function () {
   return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
-
-//Este código está limitando a busca
-
-// window.sessionStorage.setItem('specSearch', JSON.stringify({
-//  hasGroup: true,
-//  spec: 'grupo',
-//  value: '1'
-// }))
-
 const EcomPassport = require('@ecomplus/passport-client')
 const client = EcomPassport.ecomPassport.getCustomer();   
-import loadCheckDoc from '../check-group'
-loadCheckDoc()
+/* import loadCheckDoc from '../check-group'
+loadCheckDoc() */
 
 const search = new EcomSearch()
 //window.brands = search.getBrands()
