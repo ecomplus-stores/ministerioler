@@ -112,7 +112,8 @@
         },
         {
           "img": "/img/uploads/bn3.jpg",
-          "title": "Lançamentos"
+          "title": "Lançamentos",
+          "link": "/search?sort=news"
         },
         {
           "img": "/img/uploads/bn4.jpg",

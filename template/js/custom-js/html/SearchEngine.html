@@ -97,9 +97,9 @@
               </div>
             </div>
           </div>
-
+          
           <div
-            v-for="({ filter, options, isSpec }, i) in filters"
+            v-for="({ filter, options, isSpec }, i) in (authorPage ? filters.filter(el => el.filter == 'autor') : filters)"
             v-if="options.length"
             :key="`filters-${filter}`"
             class="search-engine__filter"
