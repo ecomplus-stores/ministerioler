@@ -32,7 +32,7 @@
             <slot name="stamps"/>
             <product-gallery
               :product="body"
-              :can-add-to-cart="canAddToCart && body.available && isInStock && isLogged"
+              :can-add-to-cart="canAddToCart && body.available && isInStock"
               :current-slide.sync="currentGalleyImg"
               :is-s-s-r="isSSR"
             >
@@ -135,7 +135,7 @@
 
             <slot
               name="variations"
-              v-if="hasVariations && isLogged"
+              v-if="hasVariations"
             >
               <product-variations
                 :product="body"
@@ -180,21 +180,9 @@
               </div>
             </slot>
 
-            <template v-if="!logged || !isLogged">
-              <span v-if="!logged" class="text-muted">
-                <a href="/app/#/account/">Acesse sua conta</a>
-                na loja para ver demais informações do produto
-              </span>
-
-              <span v-if="logged && !isLogged" class="text-muted">
-                Produto Indisponível
-              </span>
-              
-            </template>
-
 
             <div
-              v-if="isKit && isLogged"
+              v-if="isKit"
               class="product__kit"
             >
               <slot
@@ -255,7 +243,7 @@
               </div>
 
               <div
-                v-else-if="hasBuyButton && isLogged"
+                v-else-if="hasBuyButton"
                 class="product__buy"
                 ref="buy"
               >
@@ -477,7 +465,7 @@
     </div>
   </transition>
 
-  <template v-if="!isQuickview && hasStickyBuyButton && body.available && isInStock && isLogged">
+  <template v-if="!isQuickview && hasStickyBuyButton && body.available && isInStock">
     <transition
       enter-active-class="animated fadeIn"
       leave-active-class="animated fadeOut fast" 

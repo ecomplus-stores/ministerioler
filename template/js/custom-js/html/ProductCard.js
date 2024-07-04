@@ -107,8 +107,8 @@ import {
         return getExternalHtml('Buy', this.body)
       },
 
-      logged () {
-        return ecomPassport.checkAuthorization()
+      isLogged () {
+        return this.ecomPassport.checkAuthorization()
       }, 
   
       footerHtml () {
@@ -131,15 +131,6 @@ import {
   
       isActive () {
         return this.body.available && this.body.visible && this.isInStock
-      },
-  
-      isLogged () {
-        const group = window.sessionStorage.getItem('isGroup')
-        return !this.body.specs.length || this.body.specs.length && (this.body.specs.every(({grid}) => grid !== 'grupo') || this.body.specs.some(({grid, text}) => grid === 'grupo' && (text === group || !this.logged)))
-      },
-
-      hasGroup () {
-        return this.body.specs && this.body.specs.length && this.body.specs.some(({grid}) => grid === 'grupo')
       },
   
       discount () {

@@ -2,12 +2,10 @@
   'product-item': !isSmall  
 }">
   <div
-    v-if="!logged || isLogged"
     class="product-card"
     :class="{
       'product-card--inactive': body._id && !isActive,
-      'product-card--small': isSmall,
-      'not-spec': (logged && !isLogged) || (!logged && hasGroup)
+      'product-card--small': isSmall
     }"
     @mouseover="isHovered = true"
     :data-product-id="body._id"
@@ -189,22 +187,5 @@
     </template>
 
     <div ref="quickview"></div>
-  </div>
-  <div
-    v-else
-    class="product-card not-spec"
-    :class="{
-      'product-card--inactive': body._id && !isActive,
-      'product-card--small': isSmall
-    }"
-    @mouseover="isHovered = true"
-    :data-product-id="body._id"
-    :data-sku="body.sku"
-  >
-    <transition :enter-active-class="transitionClass">
-      <section>
-        Produto Indisponível
-      </section>
-    </transition>
   </div>
 </div>
