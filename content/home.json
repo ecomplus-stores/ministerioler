@@ -149,10 +149,10 @@
       "title": "Promoções",
       "shuffle": true,
       "type": "collection-shelf",
-      "link": "/mais-vendidos",
+      "link": "/promocoes",
       "limit": 20,
-      "collection_id": "665f3c19f4e6d85ab29f1613:collections:TESTE COLEÇÂO:/special-collection",
-      "sort": "sales"
+      "collection_id": "65f1eea287ab487fbfe4252b:categories:Promoções:/promocoes",
+      "sort": "offers"
     },
     {
       "type": "apx_banners-grid",
