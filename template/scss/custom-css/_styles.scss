@@ -2796,3 +2796,27 @@ body .search-engine__aside{
             
     }
 }
+
+@media(max-width:990px){
+    #content{
+        .search-engine__results{
+            .container{padding: 0!important;}
+        }
+        .product-card{
+            .product-card__buy{
+                button{
+                    padding: 0;
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                    span{justify-content: center;}
+                }
+                margin: 0;
+                width: 100%;
+            }
+        }
+        
+    }
+}
