@@ -275,6 +275,9 @@ import {
         if (this.canSelectServices) {
           this.$emit('select-service', this.shippingServicesFinal[i])
           this.selectedService = i
+          if (!window.dataLayer) {
+            window.dataLayer = []
+          }
           const eventLayer = window.dataLayer.find(({event}) => event === 'eec.checkout')
           window.dataLayer.push({
             event: 'add_shipping_info',
