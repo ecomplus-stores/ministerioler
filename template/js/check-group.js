@@ -4,7 +4,6 @@ import { debounce } from 'perfect-debounce'
 
 export default (isCheckout = false) => {
   const checkGroup = debounce(() => {
-    console.log('hi')
     const customerDoc = ecomPassport.getCustomer().doc_number
     if (customerDoc && customerDoc !== window.checkedGroupDoc) {
       window.axios.get(
