@@ -15,7 +15,7 @@ const themeCustom = _.settings.theme.custom || ''
         <div class="col-12 col-md mx-md-4 mb-md-0 mb-3">
           <form action="" class="py-2 px-3">
             <input type="email" placeholder="Digite seu email..." class="py-1">
-            <button type="button"><span class="d-none d-md-block">Assinar</span> <img src="./assets/arrow-right.svg"/></button>
+            <button type="button"><span class="d-none d-md-block">Assinar</span> <img src="/assets/arrow-right.svg"/></button>
           </form>
         </div>
         <% if (footer.contacts.socials) { %>
@@ -43,7 +43,7 @@ const themeCustom = _.settings.theme.custom || ''
               <% if (contacts.whatsapp) { %>
                 <li>
                   <span class="footer__list-icon">
-                    <img src="./assets/footer_whatsapp.svg"/>
+                    <img src="/assets/footer_whatsapp.svg"/>
                   </span>
                   <a
                     href="javascript:;"
@@ -60,7 +60,7 @@ const themeCustom = _.settings.theme.custom || ''
               <% if (contacts.phone) { %>
                 <li>
                   <span class="footer__list-icon">
-                    <img src="./assets/footer_phone.svg"/>
+                    <img src="/assets/footer_phone.svg"/>
                   </span>
                   <a
                     href="tel:+<%= contacts.phone.replace(/\D/g, '') %>"
@@ -76,7 +76,7 @@ const themeCustom = _.settings.theme.custom || ''
             <% if (footer.contacts.email) { %>
               <li>
                 <span class="footer__list-icon">
-                  <img src="./assets/footer_mail.svg"/>
+                  <img src="/assets/footer_mail.svg"/>
                 </span>
                 <a href="mailto:<%= contacts.email %>" target="_blank" rel="noopener">
                   <small>E-mail</small>
@@ -87,7 +87,7 @@ const themeCustom = _.settings.theme.custom || ''
             <% if (footer.contacts.address) { %>
               <li class="d-md-flex d-none">
                 <span class="footer__list-icon">
-                  <img src="./assets/footer_address.svg"/>
+                  <img src="/assets/footer_address.svg"/>
                 </span>
                 <address>
                   <small>Endereço</small>
@@ -97,7 +97,7 @@ const themeCustom = _.settings.theme.custom || ''
             <% } %>
             <li>
               <span class="footer__list-icon">
-                <img src="./assets/footer_clock.svg"/>
+                <img src="/assets/footer_clock.svg"/>
               </span>
               <p>
                 <small>Atendimento</small>
