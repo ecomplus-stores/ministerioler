@@ -1,0 +1,10 @@
+{
+  "body": "**Aproveite 10% de Desconto na Sua Primeira Compra!**\n\nBem-vindo à nossa loja! Para celebrar a sua chegada, estamos oferecendo um cupom especial de 10% de desconto na sua primeira compra. Use o código **NOVO10** no checkout e economize em sua compra inicial. Não perca esta oportunidade exclusiva!",
+  "sections": [
+    {
+      "type": "custom-html",
+      "html": "<!DOCTYPE html>\n<html lang=\"pt\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Cupom de Desconto</title>\n<style>\n#banner {\n    background-color: #FFD700;\n    color: #000;\n    padding: 15px;\n    text-align: center;\n    font-size: 18px;\n    cursor: pointer;\n    position: fixed;\n    top: 0;\n    width: 100%;\n    z-index: 9999;\n}\n</style>\n</head>\n<body>\n\n<div id=\"banner\">Clique aqui para copiar seu cupom de 10% de desconto: <strong>NOVO10</strong></div>\n\n<script>\ndocument.getElementById('banner').addEventListener('click', function() {\n    var couponCode = 'NOVO10';\n    navigator.clipboard.writeText(couponCode).then(function() {\n        alert('Cupom copiado: ' + couponCode);\n    }, function(err) {\n        alert('Falha ao copiar o cupom.');\n    });\n});\n</script>\n\n<!-- Conteúdo restante da sua página -->\n\n</body>\n</html>\n"
+    }
+  ],
+  "title": "Ganhe 10% de desconto"
+}
