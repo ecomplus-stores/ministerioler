@@ -50,7 +50,7 @@ if (opt.sort || opt.collection_id) {
     try {
       await search.fetch()
       items = search.getItems().filter(el => el.available == true)
-      console.log(items)
+      //console.log(items)
     } catch (err) {
       console.error(err)
     }
