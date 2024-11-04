@@ -3,42 +3,6 @@
   "meta_description": "",
   "sections": [
     {
-      "type": "apx_banner-slider",
-      "visibility": null,
-      "autoplay": 9000,
-      "spacing": {
-        "container": "container_90"
-      },
-      "slides": [
-        {
-          "desktop": {
-            "mask_opacity": 0,
-            "img": "/img/uploads/em-ate-12x-sem-juros.jpg"
-          },
-          "mobile": {
-            "mask_opacity": 0,
-            "img": "/img/uploads/em-ate-12x-sem-juros.jpg"
-          },
-          "start": "2024-06-12T00:49:27.990Z",
-          "end": "2024-06-12T00:49:28.003Z"
-        },
-        {
-          "desktop": {
-            "mask_opacity": 0,
-            "img": "/img/uploads/parcele-suas-compras-em-ate-12x-sem-juros-1000-x-600-px-420-x-400-px-1000-x-600-px-.jpg",
-            "link": "https://lojaler.com.br/ouca-filho-meu"
-          },
-          "mobile": {
-            "mask_opacity": 0,
-            "img": "/img/uploads/parcele-suas-compras-em-ate-12x-sem-juros-1000-x-600-px-420-x-400-px-1000-x-600-px-.jpg",
-            "link": "https://lojaler.com.br/ouca-filho-meu"
-          },
-          "start": "2024-06-12T00:49:27.990Z",
-          "end": "2024-06-12T00:49:28.003Z"
-        }
-      ]
-    },
-    {
       "type": "apx_banners-grid",
       "grid": "1",
       "visibility": "d-block d-md-block",
