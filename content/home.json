@@ -88,6 +88,17 @@
     {
       "autoplay": 1000,
       "page": 1,
+      "title": "Queima de Estoque",
+      "shuffle": true,
+      "type": "collection-shelf",
+      "link": "/z",
+      "limit": 20,
+      "collection_id": "66b6221c86679971c63da8e4:brands:z:/z",
+      "sort": "views"
+    },
+    {
+      "autoplay": 1000,
+      "page": 1,
       "title": "Maiores Promoções",
       "shuffle": true,
       "type": "collection-shelf",
