@@ -105,7 +105,7 @@
       "link": "/promocoes",
       "limit": 20,
       "collection_id": "65f1eea287ab487fbfe4252b:categories:Promoções:/promocoes",
-      "sort": "offers"
+      "sort": "views"
     },
     {
       "type": "apx_banners-grid",
