@@ -88,17 +88,6 @@
     {
       "autoplay": 1000,
       "page": 1,
-      "title": "Queima de Estoque",
-      "shuffle": false,
-      "type": "collection-shelf",
-      "link": "/origem",
-      "limit": 20,
-      "collection_id": "66182a7e0fc534303df951d9:categories:ORIGEM:/origem",
-      "sort": "offers"
-    },
-    {
-      "autoplay": 1000,
-      "page": 1,
       "title": "Maiores Promoções",
       "shuffle": true,
       "type": "collection-shelf",
