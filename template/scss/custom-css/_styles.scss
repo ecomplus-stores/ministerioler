@@ -2830,3 +2830,16 @@ body .search-engine__aside{
     }
 }
 
+
+.product__unavailable,
+.product__out-of-stock{
+    border-radius: .625rem;
+    height: 60px;
+    padding: 0 1.563rem;
+    width: 100%;
+    background: var(--warning);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,3 +1,5 @@
+window.deny_sku = [];
+window.allow_sku = [];
 /*!
  * Simple jQuery Equal Heights
  *

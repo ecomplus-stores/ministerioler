@@ -82,7 +82,7 @@ export default {
     },
     canLoadMore: {
       type: Boolean,
-      default: true
+      default: false
     },
     loadMoreSelector: String,
     canRetry: {
@@ -206,7 +206,17 @@ export default {
     },
 
     suggestedItems () {
-      return this.resultItems.length ? this.resultItems : this.popularItems
+      const allowedSkus = window.allow_sku || [];
+      const deniedSkus = window.deny_sku || [];
+      let result = this.resultItems.length ? this.resultItems : this.popularItems
+      if(allowedSkus.length > 0){
+        result = result.filter(item => allowedSkus.includes(item.sku))
+      }
+      if(deniedSkus.length > 0){
+        result = result.filter(item => !deniedSkus.includes(item.sku))
+      }
+      console.log(deniedSkus,`result`,result)
+      return result
     },
 
     loadObserver () {
@@ -560,8 +570,8 @@ export default {
     const filters = this.getFiltersFromURL(url);
     const params = new URLSearchParams(window.location.search);
     const sortValue = params.get('sort');
-    console.log(`sort`,sortValue)
-    console.log(`filtersURL`,filters)
+    // console.log(`sort`,sortValue)
+    // console.log(`filtersURL`,filters)
     if(sortValue){
       this.setSortOrder(sortValue)
     }
