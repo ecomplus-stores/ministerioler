@@ -214,14 +214,12 @@ import {
       }, 
 
       isLogged () {
+        const hasGroupSpec = this.body.specifications && this.body.specifications['grupo'] && this.body.specifications['grupo'].length
+        if (!hasGroupSpec) return true
+        
         const group = window.sessionStorage.getItem('isGroup')
-        const hasSpec = !this.body.specifications || this.body.specifications && (!this.body.specifications['grupo'] || (this.body.specifications['grupo'] && this.body.specifications['grupo'].length && this.body.specifications['grupo'][0].text === group))
-        return ecomPassport.checkAuthorization() && hasSpec
-      },
-
-      hasGroup () {
-        const hasSpec = this.body.specifications && this.body.specifications['grupo'] && this.body.specifications['grupo'].length
-        return hasSpec
+        console.log("group", group)
+        return ecomPassport.checkAuthorization() && this.body.specifications['grupo'][0].text === group
       },
   
       isVariationInStock () {
@@ -546,19 +544,6 @@ import {
     },
   
     mounted () {
-      if (window.allow_sku && window.allow_sku.length > 0) {
-        if (!window.allow_sku.includes(this.body.sku)) {
-          $(`body`).empty()
-          window.location.href = '/'
-          
-        }
-      }
-      if (window.deny_sku && window.deny_sku.length > 0) {
-        if (window.deny_sku.includes(this.body.sku)) {
-          $(`body`).empty()
-          window.location.href = '/'          
-        }
-      }
       if (this.$refs.sticky && !this.isWithoutPrice) {
         let isBodyPaddingSet = false
         const setStickyBuyObserver = (isToVisible = true) => {
