@@ -1,4 +1,6 @@
-window.deny_sku = [];
+window.deny_sku = [
+  "COD_ITEM6165", "COD_ITEM5406", "COD_ITEM5449", "COD_ITEM5930", "COD_ITEM7174", "COD_ITEM7173", "COD_ITEM7172", "COD_ITEM6999", "COD_ITEM5795","XYN5740", "JBA3448", "LSE8399", "XRV8745", "WGH9410", "WAB6774", "TUU4056"
+];
 window.allow_sku = [];
 /*!
  * Simple jQuery Equal Heights

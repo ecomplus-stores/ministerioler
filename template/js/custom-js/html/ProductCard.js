@@ -109,7 +109,23 @@ import {
 
       isLogged () {
         return this.ecomPassport.checkAuthorization()
-      }, 
+      },
+      
+      // logged () {
+      //   return ecomPassport.checkAuthorization()
+      // },
+
+      // isLogged () {
+      //   console.log(`aaa`)
+      //   const hasGroupSpec = this.body.specifications && this.body.specifications['grupo'] && this.body.specifications['grupo'].length
+      //   console.log(hasGroupSpec)
+      //   if (!hasGroupSpec) return true
+        
+      //   const group = window.sessionStorage.getItem('isGroup')
+      //   console.log(group)
+      //   console.log("group", group)
+      //   return ecomPassport.checkAuthorization() && this.body.specifications['grupo'][0].text === group
+      // },
   
       footerHtml () {
         return getExternalHtml('Footer', this.body)
