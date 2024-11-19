@@ -30,8 +30,9 @@ if (Array.isArray(opt.items) && opt.items.length) {
     opt.items = opt.items.filter(el => !deny_sku.includes(el.sku))
   }  
   
+  opt.items = opt.items.filter(el => el.available && _.ecomUtils.inStock(el))
   %>
-
+  <% if (opt.items.length > 0) { %>
   <section
     class="products-carousel"
     data-size="<%= opt.items.length %>"
@@ -68,4 +69,5 @@ if (Array.isArray(opt.items) && opt.items.length) {
 
     
   </section>
+  <% } %>
 <% } %>
