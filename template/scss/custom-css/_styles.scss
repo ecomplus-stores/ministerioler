@@ -2855,3 +2855,27 @@ body .search-engine__aside{
 
 #account-form-gender-x,
 #account-form-gender-x ~ *{display: none!important;}
+
+
+#fallback-404{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    > *{}
+    h3{font-size: var(--h2);padding-bottom: 3rem;}
+    h3:before{
+        content:"";
+        background-image:url(../../public/img/uploads/404_image.png);
+        height: 280px;
+        width: 280px;
+        display: block;
+        background-size: contain;
+        margin: 0 auto;
+    }
+    h3 ~ *{display: none;}
+}
+
+#page-404{
+    main{background:#fff}
+}
