@@ -2879,3 +2879,7 @@ body .search-engine__aside{
 #page-404{
     main{background:#fff}
 }
+
+.backdrop:not(.ativo){
+    display: none!important;
+}
