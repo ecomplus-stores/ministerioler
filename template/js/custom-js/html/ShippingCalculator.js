@@ -125,7 +125,7 @@ import {
   
       shippingServicesFinal () {
         return this.shippingServices.filter(service => 
-          !["5050","5151","5252","5353","5454","7070","1324"].includes(service.service_code)
+          !["26","5050","5151","5252","5353","5454","7070","1324"].includes(service.service_code)
           
       
         )
