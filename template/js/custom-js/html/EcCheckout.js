@@ -142,7 +142,8 @@ export default {
       loyaltyPointsApplied: {},
       loyaltyPointsAmount: 0,
       hasMoreOffers: false,
-      summaryVisible: false
+      summaryVisible: false,
+      checkoutEnabled: true
     }
   },
 
@@ -326,22 +327,29 @@ export default {
     },
 
     checkout (transaction) {
-      if (this.loyaltyPointsAmount) {
-        for (let i = 0; i < this.paymentGateways.length; i++) {
-          if (this.paymentGateways[i].payment_method.code === 'loyalty_points') {
-            const pointsAmountPart = this.loyaltyPointsAmount / this.amount.total
-            return this.$emit('checkout', [{
-              ...transaction,
-              amount_part: 1 - pointsAmountPart
-            }, {
-              ...this.paymentGateways[i],
-              loyalty_points_applied: this.loyaltyPointsApplied,
-              amount_part: pointsAmountPart
-            }])
+      if(this.checkoutEnabled){
+        this.checkoutEnabled = false
+        console.log('Realizando checkout...', transaction)
+        if (this.loyaltyPointsAmount) {
+          for (let i = 0; i < this.paymentGateways.length; i++) {
+            if (this.paymentGateways[i].payment_method.code === 'loyalty_points') {
+              const pointsAmountPart = this.loyaltyPointsAmount / this.amount.total
+              return this.$emit('checkout', [{
+                ...transaction,
+                amount_part: 1 - pointsAmountPart
+              }, {
+                ...this.paymentGateways[i],
+                loyalty_points_applied: this.loyaltyPointsApplied,
+                amount_part: pointsAmountPart
+              }])
+            }
           }
         }
+        this.$emit('checkout', transaction)
+        this.checkoutEnabled = true
+      }else{
+        console.log('Checkout já foi realizado. Tentativa de checkout ignorada.', transaction)
       }
-      this.$emit('checkout', transaction)
     },
 
     toggleSummarySm (){
